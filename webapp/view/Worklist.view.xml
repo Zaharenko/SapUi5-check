@@ -17,6 +17,7 @@
 
         <semantic:content>
             <Table
+                sticky="ColumnHeaders,HeaderToolbar"
                 id="table"
                 width="auto"
                 items="{
@@ -28,6 +29,7 @@
                 noDataText="{worklistView>/tableNoDataText}"
                 busyIndicatorDelay="{worklistView>/tableBusyDelay}"
                 growing="true"
+                growingThreshold="50"
                 growingScrollToLoad="true"
                 updateFinished="onUpdateFinished">
 
