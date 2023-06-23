@@ -120,8 +120,7 @@ sap.ui.define([
                 var that = this;
 
                 // Update the ChDate field with the current date
-                var currentDate = new Date();
-                oObject.ChDate = currentDate;
+                oObject.ChDate = new Date();
 
                 oModel.update(oElementBinding.getPath(), oObject, {
                     success: function () {

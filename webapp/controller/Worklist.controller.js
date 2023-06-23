@@ -93,7 +93,7 @@ sap.ui.define([
 
 
 
-    onSearch: function () {
+    onSearch: function() {
       var oView = this.getView();
       var sValue = oView.byId("searchField").getValue();
       var oTable = oView.byId("table");
@@ -101,37 +101,20 @@ sap.ui.define([
       var oBinding = oTable.getBinding("items");
 
       if (sValue) {
-        var oFilterInstructionShort = new sap.ui.model.Filter("InstructionShort", sap.ui.model.FilterOperator.Contains, sValue);
-        var oFilterInstructionId = new sap.ui.model.Filter("InstructionId", sap.ui.model.FilterOperator.Contains, sValue);
-        var oFilterChUser = new sap.ui.model.Filter("ChUser", sap.ui.model.FilterOperator.Contains, sValue);
-        var oFilterChData = new sap.ui.model.Filter("ChData", sap.ui.model.FilterOperator.Contains, sValue);
+        var oFilterInstructionShort = new Filter("InstructionShort", FilterOperator.Contains, sValue);
+        var oFilterInstructionId = new Filter("InstructionId", FilterOperator.Contains, sValue);
+        var oFilterChUser = new Filter("ChUser", FilterOperator.Contains, sValue);
+        var oFilterChData = new Filter("ChData", FilterOperator.Contains, sValue);
 
-        var oCombinedFilter = new sap.ui.model.Filter({
+        var oCombinedFilter = new Filter({
           filters: [oFilterInstructionShort, oFilterInstructionId, oFilterChUser, oFilterChData],
           and: false
         });
 
         oBinding.filter(oCombinedFilter);
       } else {
-        oBinding.filter([])
+        oBinding.filter([]);
       }
-    },
-
-    onSort: function () {
-      var oView = this.getView(),
-        aStates = [undefined, "asc", "desc"],
-        aStateTextIds = ["sortNone", "sortAscending", "sortDescending"],
-        sMessage,
-        iOrder = oView.getModel("appView").getProperty("/order");
-
-      iOrder = (iOrder + 1) % aStates.length;
-      var sOrder = aStates[iOrder];
-
-      oView.getModel("appView").setProperty("/order", iOrder);
-      oView.byId("peopleList").getBinding("items").sort(sOrder && new Sorter("LastName", sOrder === "desc"));
-
-      sMessage = this._getText("sortMessage", [this._getText(aStateTextIds[iOrder])]);
-      MessageToast.show(sMessage);
     },
 
     /**
@@ -157,21 +140,6 @@ sap.ui.define([
       this.getRouter().navTo("object", {
         objectId: oItem.getBindingContext().getPath().substring("/Instructions".length)
       });
-    },
-
-    /**
-     * Internal helper method to apply both filter and search state together on the list binding
-     * @param {sap.ui.model.Filter[]} aTableSearchState An array of filters for the search
-     * @private
-     */
-    _applySearch: function (aTableSearchState) {
-      var oTable = this.byId("table"),
-        oViewModel = this.getModel("worklistView");
-      oTable.getBinding("items").filter(aTableSearchState, "Application");
-      // changes the noDataText of the list in case there are no filter results
-      if (aTableSearchState.length !== 0) {
-        oViewModel.setProperty("/tableNoDataText", this.getResourceBundle().getText("worklistNoDataWithSearchText"));
-      }
     },
 
     onOpenCreateDialog: function () {
