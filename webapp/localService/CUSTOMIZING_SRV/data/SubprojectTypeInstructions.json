@@ -1,0 +1,625 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000028')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000028')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000028",
+			"InstructionShort": "Subtitling // Character length",
+			"InstructionLong": "Subtitles have a length restriction of 84 characters.\r\nIf you need to exceed the length of the English text, keep it to a \r\nreasonable minimum."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000029')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000029')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000029",
+			"InstructionShort": "Subtitling // Font for zhCN",
+			"InstructionLong": "For both Chinese and western characters, use:\r\nFont: MS Yahei \r\nSpacing: 2\r\nSize: 60 pixels"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000030')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000030')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000030",
+			"InstructionShort": "Subtitling // Long sentences for zhCN and jaJP",
+			"InstructionLong": "In Smartling, subtitles are displayed in one line. If a line is longer \r\nthan 20 characters, insert a line break to continue on the next line."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000032')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000032')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000032",
+			"InstructionShort": "Consistency",
+			"InstructionLong": "Ensure that translation is consistent with the texts within the \r\nscreenshots. Find the screenshots in Smartling under the heading \r\nDocument Instructions."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000033')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000033')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000033",
+			"InstructionShort": "Line breaks",
+			"InstructionLong": "In on-screen texts, line-breaks are indicated by double slashes. Ensure \r\nthat double slashes are in the right place in your translation."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000034')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000034')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000034",
+			"InstructionShort": "On-screen text",
+			"InstructionLong": "If you need to exceed the length of the English on-screen text, keep it \r\nto a reasonable minimum."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000035')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000035')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000035",
+			"InstructionShort": "Word order in script",
+			"InstructionLong": "Because they relate closely to the action on screen, be sure to maintain \r\nthe position and order of words in bold."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000056')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000056')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000056",
+			"InstructionShort": "Test Instruction test",
+			"InstructionLong": "<p><strong>Lorem ipsum dolor sit amet</strong>,&nbsp;<em>recusabo prodesset eos</em>&nbsp;<span style=\"text-decoration: underline;\">cu, illud euismod delicata usu ut.</span>&nbsp;<span style=\"text-decoration: line-through;\">Omnesque urbanitas reprimique ut nec</span>.</p>\n<p style=\"text-align: left; padding-left: 60px;\">Viris efficiantur eos in, qui ut explicari eloquentiam.</p>\n<p style=\"text-align: right;\">Dicit eligendi maluisset his an, eu sit essent erroribus, duo ea cibo nemore dolores.</p>\n<p style=\"text-align: center;\">Aliquid suscipiantur id eam, est ne tota virtute recteque. Vis illum nihil possim te. Qui quod viris ut, est an volutpat accusamus democritum, vix labores facilis appetere cut.</p>\n<p style=\"text-align: justify;\">Has deleniti sententiae ne, at qui alterum delectus principes, vel volumus reprimique te. Decore dolorum cu mel. At integre apeirian est. Est eirmod scripta te, ex vim wisi philosophia.</p>\n<ul>\n<li>Vis et mollis habemus instructior, ea solet erroribus eam.</li>\n<li>Solet ornatus suscipiantur ut eum, doming repudiandae nam in.</li>\n</ul>\n<ol>\n<li>Ne sed movet audire abhorreant. Usu te amet detracto. Est cu reque aeque moderatius, sit ad mazim alterum partiendo, ut unum consul his.</li>\n</ol>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000058')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='AV',InstructionId='0000000058')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "AV",
+			"InstructionId": "0000000058",
+			"InstructionShort": "Test ALL markup",
+			"InstructionLong": "<p><strong>Lorem ipsum dolor sit amet</strong>,&nbsp;<em>consectetur adipiscing elit.</em>&nbsp;<span style=\"text-decoration: underline;\">Aliquam metus odio</span>,&nbsp;<span style=\"text-decoration: line-through;\">ullamcorper eget sagittis interdum</span>,&nbsp;<span style=\"text-decoration: line-through;\"><span style=\"text-decoration: underline;\"><em><strong>accumsan sit amet elit</strong></em></span></span>.+</p>\n<ol>\n<li>Fusce ultricies pulvinar tortor a tempor.</li>\n<li>Aliquam aliquet purus urna, ut tempus ante pulvinar sit amet.</li>\n<li>In tincidunt nisl a vestibulum pretium.</li>\n</ol>\n<ul>\n<li>Aenean tempor, augue non vehicula convallis,</li>\n<li>erat massa porttitor diam, efficitur egestas lorem ex ut felis.</li>\n<li>Mauris elementum metus mattis, egestas nisl facilisis, maximus orci. Donec rhoncus porttitor sodales.</li>\n</ul>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000021')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000021')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "DTP",
+			"InstructionId": "0000000021",
+			"InstructionShort": "Conversion to A4",
+			"InstructionLong": "Prepare this document for translation:\r\n1. Make all texts editable.\r\n2. Delete all unnecessary boxes outside of the printing area.\r\n3. Convert all pages to A4.\r\n4. Create an InDesign package with an idml file."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000037')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000037')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "DTP",
+			"InstructionId": "0000000037",
+			"InstructionShort": "NON ABAP Projects",
+			"InstructionLong": "Handling of Special Characters in Translation- %If a text contains % characters, for example: %d, %3.3d, %s and %ld,these positions cannot be modified or deleted and the sequence cannot bechanged.- Format character: '\\n' new line and '\\t' tabDo not modify format characters during translation. Format charactersmust remain unchanged in the translated text.- End-of-text character \"The end-of-text character \" should not be inserted into thetranslation because texts are then truncated after this character. Use' instead.- Fastpath character: '&' and '~'The character following the '&' character is a fastpath character. Ifpossible, the fastpath character should be specified uniquely. Theunambiguity of the fastpath cannot be ensured without a test. If youcannot test the translation, you can ignore the fastpath character.Please follow these rules. Special characters must be correct in thetranslations.Description of objects and where they are used can be found here:http://service.sap.com/~form/handler?_APP=01100107900000000342&_EVENT=DISPL_TXT&_NNUM=150244&"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000056')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000056')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "DTP",
+			"InstructionId": "0000000056",
+			"InstructionShort": "Test Instruction test",
+			"InstructionLong": "<p><strong>Lorem ipsum dolor sit amet</strong>,&nbsp;<em>recusabo prodesset eos</em>&nbsp;<span style=\"text-decoration: underline;\">cu, illud euismod delicata usu ut.</span>&nbsp;<span style=\"text-decoration: line-through;\">Omnesque urbanitas reprimique ut nec</span>.</p>\n<p style=\"text-align: left; padding-left: 60px;\">Viris efficiantur eos in, qui ut explicari eloquentiam.</p>\n<p style=\"text-align: right;\">Dicit eligendi maluisset his an, eu sit essent erroribus, duo ea cibo nemore dolores.</p>\n<p style=\"text-align: center;\">Aliquid suscipiantur id eam, est ne tota virtute recteque. Vis illum nihil possim te. Qui quod viris ut, est an volutpat accusamus democritum, vix labores facilis appetere cut.</p>\n<p style=\"text-align: justify;\">Has deleniti sententiae ne, at qui alterum delectus principes, vel volumus reprimique te. Decore dolorum cu mel. At integre apeirian est. Est eirmod scripta te, ex vim wisi philosophia.</p>\n<ul>\n<li>Vis et mollis habemus instructior, ea solet erroribus eam.</li>\n<li>Solet ornatus suscipiantur ut eum, doming repudiandae nam in.</li>\n</ul>\n<ol>\n<li>Ne sed movet audire abhorreant. Usu te amet detracto. Est cu reque aeque moderatius, sit ad mazim alterum partiendo, ut unum consul his.</li>\n</ol>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000058')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='DTP',InstructionId='0000000058')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "DTP",
+			"InstructionId": "0000000058",
+			"InstructionShort": "Test ALL markup",
+			"InstructionLong": "<p><strong>Lorem ipsum dolor sit amet</strong>,&nbsp;<em>consectetur adipiscing elit.</em>&nbsp;<span style=\"text-decoration: underline;\">Aliquam metus odio</span>,&nbsp;<span style=\"text-decoration: line-through;\">ullamcorper eget sagittis interdum</span>,&nbsp;<span style=\"text-decoration: line-through;\"><span style=\"text-decoration: underline;\"><em><strong>accumsan sit amet elit</strong></em></span></span>.+</p>\n<ol>\n<li>Fusce ultricies pulvinar tortor a tempor.</li>\n<li>Aliquam aliquet purus urna, ut tempus ante pulvinar sit amet.</li>\n<li>In tincidunt nisl a vestibulum pretium.</li>\n</ol>\n<ul>\n<li>Aenean tempor, augue non vehicula convallis,</li>\n<li>erat massa porttitor diam, efficitur egestas lorem ex ut felis.</li>\n<li>Mauris elementum metus mattis, egestas nisl facilisis, maximus orci. Donec rhoncus porttitor sodales.</li>\n</ul>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000022')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000022')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000022",
+			"InstructionShort": "Google Ad copy // Length restrictions",
+			"InstructionLong": "<p>The file contains Google Ads that have length restrictions. Please don't exceed them. Find the length restrictions in Google's help page: https://support.google.com/adwordspolicy/answer/175910?hl=en To find the character counts for each section, unhide the column to the right.+</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000023')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000023')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000023",
+			"InstructionShort": "Hashtags in tweets",
+			"InstructionLong": "Where possible, we localize hashtags to help you run a local Twitter \r\ncampaign and monitor it. \r\nHowever, should you prefer to keep the hashtags in English, please \r\ncontact us."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000024')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000024')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000024",
+			"InstructionShort": "Length restriction for tweets",
+			"InstructionLong": "Tweets have a length restriction of 140 characters. \r\nDo not exceed this.\r\nTo find the character count, go to the Code tab on the lower right of \r\nyour translation editor in Smartling."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000025')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000025')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000025",
+			"InstructionShort": "Length restriction in upload deck",
+			"InstructionLong": "The upload deck file has length restrictions. \r\nDo not exceed them.\r\nTo find the character count, go to the Code tab on the lower right of \r\nyour translation editor in Smartling."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000031')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000031')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000031",
+			"InstructionShort": "TQA projects // Translation feedback",
+			"InstructionLong": "Please include in your delivery a separate Word document containing a \r\nbrief evaluation of the translation quality."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000058')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000058')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000058",
+			"InstructionShort": "Test ALL markup",
+			"InstructionLong": "<p><strong>Lorem ipsum dolor sit amet</strong>,&nbsp;<em>consectetur adipiscing elit.</em>&nbsp;<span style=\"text-decoration: underline;\">Aliquam metus odio</span>,&nbsp;<span style=\"text-decoration: line-through;\">ullamcorper eget sagittis interdum</span>,&nbsp;<span style=\"text-decoration: line-through;\"><span style=\"text-decoration: underline;\"><em><strong>accumsan sit amet elit</strong></em></span></span>.+</p>\n<ol>\n<li>Fusce ultricies pulvinar tortor a tempor.</li>\n<li>Aliquam aliquet purus urna, ut tempus ante pulvinar sit amet.</li>\n<li>In tincidunt nisl a vestibulum pretium.</li>\n</ol>\n<ul>\n<li>Aenean tempor, augue non vehicula convallis,</li>\n<li>erat massa porttitor diam, efficitur egestas lorem ex ut felis.</li>\n<li>Mauris elementum metus mattis, egestas nisl facilisis, maximus orci. Donec rhoncus porttitor sodales.</li>\n</ul>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000060')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000060')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000060",
+			"InstructionShort": "test 2",
+			"InstructionLong": "<p>blablabla</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000064')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000064')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000064",
+			"InstructionShort": "Google Ad copy // Length restrictions",
+			"InstructionLong": "<p>The file contains Google Ads that have length restrictions. Please don't exceed them. Find the length restrictions in Google's help page: https://support.google.com/adwordspolicy/answer/175910?hl=en To find the character counts for each section, unhide the column to the right.+</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000065')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='LING_ONLY',InstructionId='0000000065')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "LING_ONLY",
+			"InstructionId": "0000000065",
+			"InstructionShort": "Google Ad copy // Length restrictions",
+			"InstructionLong": "<p>The file contains Google Ads that have length restrictions. Please don't exceed them. Find the length restrictions in Google's help page: https://support.google.com/adwordspolicy/answer/175910?hl=en To find the character counts for each section, unhide the column to the right.+</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000037')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000037')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "OTHER",
+			"InstructionId": "0000000037",
+			"InstructionShort": "NON ABAP Projects",
+			"InstructionLong": "Handling of Special Characters in Translation- %If a text contains % characters, for example: %d, %3.3d, %s and %ld,these positions cannot be modified or deleted and the sequence cannot bechanged.- Format character: '\\n' new line and '\\t' tabDo not modify format characters during translation. Format charactersmust remain unchanged in the translated text.- End-of-text character \"The end-of-text character \" should not be inserted into thetranslation because texts are then truncated after this character. Use' instead.- Fastpath character: '&' and '~'The character following the '&' character is a fastpath character. Ifpossible, the fastpath character should be specified uniquely. Theunambiguity of the fastpath cannot be ensured without a test. If youcannot test the translation, you can ignore the fastpath character.Please follow these rules. Special characters must be correct in thetranslations.Description of objects and where they are used can be found here:http://service.sap.com/~form/handler?_APP=01100107900000000342&_EVENT=DISPL_TXT&_NNUM=150244&"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000052')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000052')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "OTHER",
+			"InstructionId": "0000000052",
+			"InstructionShort": "Instruction test!",
+			"InstructionLong": "<p><em><strong>This is a test! No, really.</strong></em></p>\n<p>&nbsp;</p>\n<p><em><strong>This is a <a href=\"http://www.sap.com\" target=\"_blank\">URL</a>.</strong></em></p>\n<p><em><strong>https://www.sap.com&nbsp;</strong></em></p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000058')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000058')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "OTHER",
+			"InstructionId": "0000000058",
+			"InstructionShort": "Test ALL markup",
+			"InstructionLong": "<p><strong>Lorem ipsum dolor sit amet</strong>,&nbsp;<em>consectetur adipiscing elit.</em>&nbsp;<span style=\"text-decoration: underline;\">Aliquam metus odio</span>,&nbsp;<span style=\"text-decoration: line-through;\">ullamcorper eget sagittis interdum</span>,&nbsp;<span style=\"text-decoration: line-through;\"><span style=\"text-decoration: underline;\"><em><strong>accumsan sit amet elit</strong></em></span></span>.+</p>\n<ol>\n<li>Fusce ultricies pulvinar tortor a tempor.</li>\n<li>Aliquam aliquet purus urna, ut tempus ante pulvinar sit amet.</li>\n<li>In tincidunt nisl a vestibulum pretium.</li>\n</ol>\n<ul>\n<li>Aenean tempor, augue non vehicula convallis,</li>\n<li>erat massa porttitor diam, efficitur egestas lorem ex ut felis.</li>\n<li>Mauris elementum metus mattis, egestas nisl facilisis, maximus orci. Donec rhoncus porttitor sodales.</li>\n</ul>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000067')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='OTHER',InstructionId='0000000067')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "OTHER",
+			"InstructionId": "0000000067",
+			"InstructionShort": "ES_TEST_INSTR",
+			"InstructionLong": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus ligula ac euismod scelerisque. Donec elementum sit amet quam nec condimentum. Cras tristique augue id vulputate tempus. Proin vel luctus augue, non vulputate leo. Pellentesque luctus elementum diam eu aliquet. Donec lacinia accumsan massa at dictum. Aliquam erat volutpat. Mauris quis vestibulum justo. In quis posuere lectus. Nam nec mauris tellus. Curabitur quis placerat justo.</p>\n<p>Aenean eu erat justo.</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000009')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000009')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TEST",
+			"InstructionId": "0000000009",
+			"InstructionShort": "DITA Projects",
+			"InstructionLong": "<p>ORBITT for IxiaSoft Translation Tips &amp; Tricks: http://service.sap.com/ ~sapidb/011000358700000068112014E Please refer to the procedures listed in the ORBITT documentation available on the Translation Portal splash screen. Trados Tags: Please do NOT unlock tag protection if you find any errors in XML tagging during translation (except if you are explicitly requested and instructed how to do so by your SAP project manager or quality engineer). Instead, you should report any XML errors to us via CSN (Component SLS-SRV-PM), indicating the collection and error description. Virtual Translation Portal: External translations can log on the Translation Portal using the external access http://mywtspartners.sap.com -&gt; Translation Portal Issues: Please use the CSS component SLS-SRV-PM to report any technical issues.</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000037')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000037')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TEST",
+			"InstructionId": "0000000037",
+			"InstructionShort": "NON ABAP Projects",
+			"InstructionLong": "Handling of Special Characters in Translation- %If a text contains % characters, for example: %d, %3.3d, %s and %ld,these positions cannot be modified or deleted and the sequence cannot bechanged.- Format character: '\\n' new line and '\\t' tabDo not modify format characters during translation. Format charactersmust remain unchanged in the translated text.- End-of-text character \"The end-of-text character \" should not be inserted into thetranslation because texts are then truncated after this character. Use' instead.- Fastpath character: '&' and '~'The character following the '&' character is a fastpath character. Ifpossible, the fastpath character should be specified uniquely. Theunambiguity of the fastpath cannot be ensured without a test. If youcannot test the translation, you can ignore the fastpath character.Please follow these rules. Special characters must be correct in thetranslations.Description of objects and where they are used can be found here:http://service.sap.com/~form/handler?_APP=01100107900000000342&_EVENT=DISPL_TXT&_NNUM=150244&"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000052')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000052')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TEST",
+			"InstructionId": "0000000052",
+			"InstructionShort": "Instruction test!",
+			"InstructionLong": "<p><em><strong>This is a test! No, really.</strong></em></p>\n<p>&nbsp;</p>\n<p><em><strong>This is a <a href=\"http://www.sap.com\" target=\"_blank\">URL</a>.</strong></em></p>\n<p><em><strong>https://www.sap.com&nbsp;</strong></em></p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000054')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TEST',InstructionId='0000000054')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TEST",
+			"InstructionId": "0000000054",
+			"InstructionShort": "NON ABAP Projects5",
+			"InstructionLong": "<p><strong>Handling of Special Characters in Translation</strong>- %If a text contains % characters, for example: %d, %3.3d, %s and %ld,these positions cannot be modified or deleted and the sequence cannot bechanged.- Format character: '\\n' new line and '\\t' tabDo not modify format characters during translation. Format charactersmust remain unchanged in the translated text.- End-of-text character \"The end-of-text character \" should not be inserted into thetranslation because texts are then truncated after this character. Use' instead.- Fastpath character: '&amp;' and '~'The character following the '&amp;' character is a fastpath character. Ifpossible, the fastpath character should be specified uniquely. Theunambiguity of the fastpath cannot be ensured without a test. If youcannot test the translation, you can ignore the fastpath character.Please follow these rules. Special characters must be correct in thetranslations.Description of objects and where they are used can be found here:http://service.sap.com/~form/handler?_APP=01100107900000000342&amp;_EVENT=DISPL_TXT&amp;_NNUM=150244&amp;</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000013')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000013')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000013",
+			"InstructionShort": "F1 Help for CS (NW)",
+			"InstructionLong": "F1 Help (object group C6) for CS: Translation relevant collections are \r\nin the graphs [NW: Records Management* for Netweaver]. F1 Help in all \r\nother NW Collections should be ignored."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000021')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000021')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000021",
+			"InstructionShort": "Conversion to A4",
+			"InstructionLong": "Prepare this document for translation:\r\n1. Make all texts editable.\r\n2. Delete all unnecessary boxes outside of the printing area.\r\n3. Convert all pages to A4.\r\n4. Create an InDesign package with an idml file."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000028')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000028')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000028",
+			"InstructionShort": "Subtitling // Character length",
+			"InstructionLong": "Subtitles have a length restriction of 84 characters.\r\nIf you need to exceed the length of the English text, keep it to a \r\nreasonable minimum."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000029')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000029')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000029",
+			"InstructionShort": "Subtitling // Font for zhCN",
+			"InstructionLong": "For both Chinese and western characters, use:\r\nFont: MS Yahei \r\nSpacing: 2\r\nSize: 60 pixels"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000030')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000030')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000030",
+			"InstructionShort": "Subtitling // Long sentences for zhCN and jaJP",
+			"InstructionLong": "In Smartling, subtitles are displayed in one line. If a line is longer \r\nthan 20 characters, insert a line break to continue on the next line."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000032')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000032')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000032",
+			"InstructionShort": "Consistency",
+			"InstructionLong": "Ensure that translation is consistent with the texts within the \r\nscreenshots. Find the screenshots in Smartling under the heading \r\nDocument Instructions."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000033')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000033')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000033",
+			"InstructionShort": "Line breaks",
+			"InstructionLong": "In on-screen texts, line-breaks are indicated by double slashes. Ensure \r\nthat double slashes are in the right place in your translation."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000034')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000034')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000034",
+			"InstructionShort": "On-screen text",
+			"InstructionLong": "If you need to exceed the length of the English on-screen text, keep it \r\nto a reasonable minimum."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000035')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000035')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000035",
+			"InstructionShort": "Word order in script",
+			"InstructionLong": "Because they relate closely to the action on screen, be sure to maintain \r\nthe position and order of words in bold."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000060')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='TST_PRDT',InstructionId='0000000060')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "TST_PRDT",
+			"InstructionId": "0000000060",
+			"InstructionShort": "test 2",
+			"InstructionLong": "<p>blablabla</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000001')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000001')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000001",
+			"InstructionShort": "NON ABAP Projects",
+			"InstructionLong": "<p>Handling of Special Characters in Translation - % If a text contains % characters, for example: %d, %3.3d, %s and %ld, these positions cannot be modified or deleted and the sequence cannot be changed. - Format character: '\\n' new line and '\\t' tab Do not modify format characters during translation. Format characters must remain unchanged in the translated text. - End-of-text character \" The end-of-text character \" should not be inserted into the translation because texts are then truncated after this character. Use ' instead. - Fastpath character: '&amp;' and '~' The character following the '&amp;' character is a fastpath character. If possible, the fastpath character should be specified uniquely. The unambiguity of the fastpath cannot be ensured without a test. If you cannot test the translation, you can ignore the fastpath character. Please follow these rules. Special characters must be correct in the translations. Description of objects and where they are used can be found here: http://service.sap.com/~form/handler?_APP=01100107900000000342 &amp;_EVENT=DISPL_TXT&amp;_NNUM=150244&amp;</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000002')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000002')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000002",
+			"InstructionShort": "Translation from ES,FR,IT,NL, AND PT into EN (SAP_HR & EA_HR Only)",
+			"InstructionLong": "<p><strong>How to find the graphs rel</strong>evant for translation SLS language -&gt; EN. As always, certain collections have an SLS language as original language and must be translated from this language into EN. SLS is responsible for these translations. Here is how to find the graphs relevant for tra<span style=\"text-decoration: line-through;\">nslation SLS language -&gt; EN. In the collection selection screen: - In \"Selection Basis\" click \"Choose\" on the \"Graphs\" line - On the next screen, choose \"Next Variant\" to the right twice (black arrows at the bottom) - You now have the graphs listed first by target languag</span>e and then by original language. Go to enUS. Under the enUS node, you will see all source languages maintained for translation into EN. Double-click on the original language to select all relevant collections - If you find objects with original language other than DE, EN, ES, FR, IT, NL or PT in your worklist do not translate them but contact your PM. Note that the DE/EN deadline applies for all translation into EN!</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000003')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000003')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000003",
+			"InstructionShort": "Copyright",
+			"InstructionLong": "<p>TX COPYRIGHT* for all languages except DE, EN, ES, FR, IT, JA, PT, ZH (SAP_BASIS only) 1. These objects need to called up directly as the object type is not relevant for most of the languages. 2. Go to SE63 3. Enter TX 4. Enter COPYRIGHT*, press F4 5. Translate all listed objects</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000004')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000004')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000004",
+			"InstructionShort": "DUET",
+			"InstructionLong": "Duet Guidelines for CS, DA, DE, ES, FI, FR, HU, IT, ptBR, NL, PL, RU, \r\nSV, JA, KO, zhCN, zhTW: (All systems on SAP_BASIS 700 or higher; check \r\nalso if there are Duet collection in your application)\r\n\r\nThe Duet packages are in the following graphs\r\n\r\n- NW: Duet: All languages\r\n- NW: SAP_BW: Duet: All languages except AR,SH,TH\r\n\r\nImportant: Duet has its own terminology in STERM under component OPU-\r\nDUE. For the translation of these collections the automatic distribution \r\nhas been deactivated. Please follow the process below:\r\n\r\nVerify whether the string contains terminology that is specific to Duet.\r\n\r\nIf it does not contain Duet-specific terminology please translate as \r\nusual with the standard terminology.\r\n\r\nIf it contains Duet-specific terminology\r\na) translate the string with SAP standard terminology once in order to \r\nsend a standard translation to the proposal pool\r\nb) change the terminology and define the string as an exception\r\n\r\nDuet specific information can be found under \r\nhttp://service.sap.com/~form/sapnet?_SHORTKEY=01100035870000626897\r\n&_OBJECT=011000358700004503232006E"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000005')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000005')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000005",
+			"InstructionShort": "Single Objects",
+			"InstructionLong": "Single Objects Requiring Special Treatment although the objects appear \r\nin standard SE63 worklists (relevant for all languages if not otherwise \r\nspecified): (SAP_BASIS Only)\r\n- Table T015Z: see Note 1003839 - Translation of table T015Z\r\n- Logical objects BSVI (Table TJ02T): Note 526363 - Translation of table \r\nTJ02T (logical objects BSVI)\r\n- Table T006A - Units of Measure: Note 372410 - Translation of table \r\nT006A in SE63\r\n- Table TRMSG (only relevant for DE,EN,CS,ES,FR,HU,IT,JA,NL,PL,PT,RU,SK \r\nwho have it in their standard WLs)\r\n- There are about 15 lines which are not translatable: when saving the \r\nobject the previous translation appears in the translation line - or in \r\nsome cases the line becomes untranslated again. Please ignore lines with \r\nthis kind of - similar - behaviour. In case there are more \r\nuntranslatable lines than expected, stop translation and report problem \r\nto PM."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000006')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000006')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000006",
+			"InstructionShort": "PDF Translation for GTS",
+			"InstructionLong": "PDFs for GTS are translated into much more languages than for other \r\nproducts. So please always check the statistics, even if you normally do \r\nnot translate PDFs.\r\nFor details on how to translate PDFs in general, please see the \r\nfollowing document:\r\nhttp://service.sap.com/~form/sapnet?_SHORTKEY=01100035870000692482\r\n&_OBJECT=011000358700001989582008E\r\n\r\nFor GTS PDF translation, there are special rules concerning translation-\r\nrelevance, templates and source languages. Please refer to the following \r\nlist:\r\nhttp://service.sap.com/~form/sapnet?_SHORTKEY=01100035870000735385\r\n&_OBJECT=011000358700001322862010E\r\n\r\n- Translation-relevance:\r\n  If PDFs are marked in black in this list, they have to be translated \r\ninto the respective target language if they appear in your worklist. \r\n  If the template is NOT on this list, the PDF must NOT be translated, \r\neven if it appears in your worklist!\r\n- Templates:\r\n  All PDFs marked in red in this list have to be translated according to \r\nthe template! So please consider that you have to use the template for \r\nthis translation, there is no \"free\" translation allowed!\r\n- Source language:\r\n  Some languages have to check the PDFs from a different source language \r\nthan usual. Please pay attention whether your source language is DE or \r\nEN.\r\n\r\n\r\nNot Translation-Relevant for GTS:\r\n\r\nIrrelevant Tables:\r\nThe following tables are only relevant for translation into EN!\r\nFrom GTS 7.1 SP05 on, they may appear again in the worklist, but please \r\ndo not translate them into any other language except EN!\r\n\r\n/SAPSLL/CUCAART Abgabenarten - Bezeichnung\r\n/SAPSLL/CUCAFAT Beantragte Begünstigung - Bezeichnung\r\n/SAPSLL/CUCAGGT Abgabengruppe Steuerbescheid - Bezeichnung\r\n/SAPSLL/CUCAPRT Zusatzverfahren - Bezeichnung\r\n/SAPSLL/CUCBMST Bemessungsmaßstab Steuerbescheid - Bez.\r\n/SAPSLL/CUCCPGT Containerstatus\r\n/SAPSLL/CUCDADT Definition Abgabenarten - Texttabelle\r\n/SAPSLL/CUCDCT Art der Anmeldung für Global Trade Srv. - Bezeichnung\r\n/SAPSLL/CUCFDPT Packstückarten - Bezeichnung\r\n/SAPSLL/CUCINDT Kennzeichen Zollabwicklung\r\n/SAPSLL/CUCMEST Meldungscodes - Bezeichnungen\r\n/SAPSLL/CUCMOTT Art des Beförderungsmittels - Bezeichnung\r\n/SAPSLL/CUCMTRT Verkehrszweig\r\n/SAPSLL/CUCNGAT Warenkreis - Bezeichnung\r\n/SAPSLL/CUCPATT Vorpapierarten Bezeichnung\r\n/SAPSLL/CUCPOPT Ausstellende Behörde Bezeichnung\r\n/SAPSLL/CUCPQUT Qualifikator der Unterlage - Bezeichnung\r\n/SAPSLL/CUCPROT Zollrechtliche Bestimmung Bezeichnung\r\n/SAPSLL/CUCPSTT Status einer Unterlage Bezeichnung\r\n/SAPSLL/CUCPTYT Packstückarten - Bezeichnung\r\n/SAPSLL/CUCPYTT Zahlungsarten - Bezeichnungen\r\n/SAPSLL/CUCREST Kontrollergebnis Zoll - Bezeichnung\r\n/SAPSLL/CUCSLTT Verschlußarten - Bezeichnung\r\n/SAPSLL/CUCSTAT Zollrechtlicher Status der Ware - Bezeichnung\r\n/SAPSLL/CUCSTT Zollrechtlicher Status - Bezeichnung\r\n/SAPSLL/CUCSUST Aufschubarten - Bezeichnung\r\n/SAPSLL/CUCVAT Anmeldeart - Bezeichnung\r\n/SAPSLL/CUCZAFT Zahlungsaufforderung für Steuerbescheid - Bezeichnung\r\n/SAPSLL/LEGBTT Zollgeschäftsarten - Bezeichnung\r\n/SAPSLL/LEGEPT Ausfuhrarten Bezeichnung\r\n/SAPSLL/LEGSLTT Sitz des Einführers - Bezeichnung\r\n/SAPSLL/LEGSSTT Statistikstatus - Bezeichnung\r\n/SAPSLL/TLEACMT Nachrichten zur Aktivität\r\n/SAPSLL/TLEPAFT Aktivitätenfolge für Global Trade Srv. - Bezeichnung\r\n/SAPSLL/TLEPRAT Prozessaktivitäten für Global Trade Services\r\n/SAPSLL/TLEPRT Prozesse für Global Trade Services - Bezeichnung\r\n/SAPSLL/TLEPST Prozessschema für Global Trade Services - Bezeichnung\r\n\r\n\r\nIrrelevant TLGS:\r\n/SAPSLL/PF_US_7525V\r\n/SAPSLL/PF_US_CF3461\r\n/SAPSLL/PF_US_CF7501\r\n/SAPSLL/PF_US_CF7533\r\n/SAPSLL/PF_US_COM_IN\r\n/SAPSLL/PF_US_COO\r\n/SAPSLL/PF_US_SLI\r\n/SAPSLL/PF_CA_CCCF\r\n/SAPSLL/PF_NAFTA_VD_1\r\n/SAPSLL/PF_DE_CTAX \r\n/SAPSLL/PF_DE_CUSTST\r\n/SAPSLL/PF_NAFTA_CA_COO; ATTENTION: Relevant for FR,ES\r\n/SAPSLL/PF_NAFTA_COO; ATTENTION: Relevant for FR,ES\r\n/SAPSLL/PF_NAFTA_MX_COO; ATTENTION: Relevant for FR,ES"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000007')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000007')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000007",
+			"InstructionShort": "Single objects for DQM",
+			"InstructionLong": "Special objects:\r\n1. Please manually check translation/translate the following single \r\nobjects in all translation systems\r\nObject type: TABT\r\nObject names:\r\nOn all systems/basis levels:\r\n/FLDQ/AD_CFG_RVW\r\n/FLDQ/ADR_RVW_BT\r\n/FLDQ/AD_VAL_CNT\r\n/FLDQ/AD_SUPPROC\r\n/FLDQ/AD_SUPPCCK\r\n/FLDQ/AD_SCR_RVW\r\n/FLDQ/AD_SCR_DUP\r\n/FLDQ/AD_QTR_OBJ\r\n/FLDQ/AD_CFGPRMS\r\n/FLDQ/AD_RVW_CUS\r\n/FLDQ/AD_SUGLBL\r\n/FLDQ/AD_SUGFLD\r\n(MDG related, may not be on all systems/basis-levels):\r\n/FLDQ/AD_FUNCS\r\n(CRM related, may not be on all systems/basis-levels):\r\n/FLDQ/AD_MKTGDUP\r\n\r\nObject type: VIEW\r\nObject names: \r\nFLDQ/V_AD_RGNS\r\n\r\n2. NOT to be translated: strings with technical names, single characters \r\nand numeric strings in the BC set /fldq/47u6x (se63 object type SCP1, \r\nobject name /fldq/47u6x). \r\nHere some details about what should be translated and what not from \r\ndevelopment:\r\n\r\nAlso, as we have had issues in the past with one of our tables that is \r\nmarked as translation-relevant, but not all values should be translated. \r\nBelow is a reminder/list of the type of values that should NOT be \r\ntranslated (i.e., they should be left in their English original value).\r\n\r\nIn our bc set /fldq/47u6x (i.e., I see it via se63->scp1 for \r\n/fldq/47u6x), there were about 17 new records added (and possibly \r\nadditional ones that were modified). \r\nEach of these records have error message text (which should be \r\ntranslated) and then other fields (values such as /FLDQ/AD_TECH_ERRORS, \r\nsingle character such as 'E', and numerics) - these should be left in \r\ntheir English/original values.\r\n\r\nExample values in the /fldq/47u6x bc set:\r\n\r\n\"An error occurred during...\" - text messages such as these should be \r\ntranslated in all languages\r\n\r\n\"/FLDQ/AD_TECH_ERRORS\" - should be left as \"/FLDQ/AD_TECH_ERRORS\" in all \r\nlanguages\r\n\r\nSingle characters such as 'E' - should be left as 'E' in all languages \r\n(I believe these are the values that were translated in earlier versions \r\nand caused issues in our implementation)\r\n\r\nNumeric - should be same value in all languages\r\n\r\n3. TABL/TAIS CVERS_REF (All products)\r\n\r\nThis table must be called up and translated once after final WL-run."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000010')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000010')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000010",
+			"InstructionShort": "Syclo non-ABAP Projects",
+			"InstructionLong": "Syclo non-ABAP Projects: \r\n1) Concatenated CamelCase strings such as SuccessfulLoginAction are \r\nvariables that are used in internal logs and other technical texts. They \r\nwill not be displayed to the end-users on the device and do not have to \r\nbe translated.\r\n\r\n2) Strings containing placeholders such as Rule 042%1042 or The %1 value \r\nis outside of the allowable range of %2 to %3 are used in error messages \r\nand console logs. The placeholders are parameters that will be replaced \r\nby an actual value on the device. As a rule of thumb the strings should \r\nbe translated with the exception of the placeholders."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000011')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000011')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000011",
+			"InstructionShort": "B1 UI Translation",
+			"InstructionLong": "Business One String Information Portal (SIP): Please use SIP during \r\ntranslation. You can access SIP through VTP: \r\nhttp://sip.bts.global.corp.sap.\r\n\r\nThe String Information Portal (SIP) is designed to display additional \r\nreferences and context for user interface (UI) texts for SAP Business \r\nOne® that are translated in translation system BOL. It aims to help \r\nlanguage providers better understand the meaning of those strings and \r\ndeliver better language quality for SAP Business One® products. \r\n\r\nThe String Information Portal covers only strings from the SAP Business \r\nOne® core. It does not cover strings from separately developed add-ons, \r\nanalytics, or mobile apps. \r\n\r\nVariables: \r\nVariables must be copied exactly from the English source in the exact \r\norder of their original appearance!\r\nThe translation must contain exactly the same number of variables as the \r\nsource text!\r\nIf a % variable is followed by a character (e.g. %s, %ld) this character \r\nmust remain the same as in the source language!\r\n\r\nJournal Display Strings (object SBO(S161)_92DEV,objecttype XTIT):\r\nThe abbreviations in the target languages MUST NOT EXCEED TWO \r\nCHARACTERS.\r\nDo not use the same target language abbreviation for two different \r\nEnglish source abbreviations; the chosen abbreviations must be UNIQUE in \r\nthe target language within the object.\r\n\r\nTable Categories (strings beginning with numbers, for example, 1 -24 \r\nAffected Assets (object SBO(S33)_92DEV, object typeXTXT)):\r\nThe numbers at thebeginning of these strings are internalSAP Business \r\nOne client identifiers oftable categories/sub-categories. Ifthese \r\nnumbers are changed, this causesserious issues in the SAP Business \r\nOneclient regarding the definition ofuser-defined fields.\r\n\r\nPlease ensure thatthe formatting of the numbers includingthe space \r\nbetween the numbers is copiedfrom the source text."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000012')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000012')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000012",
+			"InstructionShort": "Tables",
+			"InstructionLong": "TABL/TAIS CVERS_REF and CVERS_TXT (All products)\r\nThis table must be called up and translated once after final WL-run."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000015')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000015')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000015",
+			"InstructionShort": "PDFs",
+			"InstructionLong": "Translation of PDF-based Forms (potentially all products based on Basis \r\n700 and above): Instructions on the PDF form translation - including \r\npreviewing in transaction SFP, page 18: ORBITT for PDF - Step-by-Step \r\n(http://service.sap.com/~form/sapnet?_SHORTKEY=01100035870000692482\r\n&_SCENARIO=01100035870000000112&_OBJECT=011000358700001989582008E)"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000016')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000016')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000016",
+			"InstructionShort": "OTRS Texts",
+			"InstructionLong": "Translation of OTR Texts (all products on Basis 640 or below): More \r\ninformation under \r\nhttp://help.sap.com/saphelp_snc70/helpdata/en/f8/dd8a0f276111d5b31600010\r\n2a3fd99/content.htm?\r\nframeset=/en/f8/dd8a0f276111d5b316000102a3fd99/frameset.htm\r\n\r\nRelease lower than 7.02 (SP5): (all)\r\n\r\nObject type where only new objects are relevant:\r\nSSF, WFLW and TEXT\r\nDue to technical reasons for these object types only the new objects \r\nshould be translated. If possible, this should only be done after the \r\nfinal worklists are available.\r\nPreviously translated objects are displayed as modified - and there is \r\nno way of telling whether a \"modified\" object is really modified or \r\nwhether it is correctly translated.\r\nRelease 7.02 (SP5) or higher\r\nModified lines from object types SSF should be translated!\r\n\r\nAs of Release 703 as well as in NW730 and higher \r\nIn translation systems on these releases, translators must now translate \r\nboth new and modified objects for object types WFLW and TEXT."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000017')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000017')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000017",
+			"InstructionShort": "LOWTABU Graphs",
+			"InstructionLong": "Objects in LOWTABU graphs: ATTENTION - the rules changed here! . If you \r\nare translating objects belonging to lowtabu graphs, please translate \r\nany object type you find in your worklist, not only lowtabu object types \r\nlike before."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000018')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000018')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000018",
+			"InstructionShort": "Special Texts and Tables for SAP APPL & SAP HR Only",
+			"InstructionLong": "Translation of Special Texts XSS Area Pages (SAP APPL & SAP HR only)\r\nRelevant for all languages, all languages translate from their standard \r\nsource language\r\nGo to SE63 -> Translation -> ABAP Objects -> Special Texts XSS Area \r\nPages\r\nDouble-click on T7XSSSERSTRLAN\r\nSelect your source language\r\nSelect your target language\r\nSelect all entries\r\nTranslate all entries\r\nTables CABNT/CAWNT (SAP APPL & SAP HR only)\r\nThese tables only appear in worklists for DE/EN, but they are relevant \r\nfor all. Other languages must call them up directly in SE63. This must \r\nbe done at least once after DE/EN completion."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000019')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000019')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000019",
+			"InstructionShort": "Learning Solution: Only in the Software Component LSOFE",
+			"InstructionLong": "Please check all TX objects starting with LSO*\r\nSE63 -> TX -> LSO* ->press F4 -> choose with double click one by one, \r\ncheck and translate if necessary.\r\nThis rule is not valid for projects for LSO parts within software \r\ncomponent EA-HR."
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000020')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000020')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000020",
+			"InstructionShort": "Cloud for Customer: First priority translation",
+			"InstructionLong": "Translate the following two objects with highest priority, i.e. before \r\nyou start the regular translation:\r\nObject type: BCBS\r\nObject name: BCBS/APBP/REL_CAT and BCBSBUPA_REL_CAT_INDU_BANK"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000054')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000054')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000054",
+			"InstructionShort": "NON ABAP Projects5",
+			"InstructionLong": "<p><strong>Handling of Special Characters in Translation</strong>- %If a text contains % characters, for example: %d, %3.3d, %s and %ld,these positions cannot be modified or deleted and the sequence cannot bechanged.- Format character: '\\n' new line and '\\t' tabDo not modify format characters during translation. Format charactersmust remain unchanged in the translated text.- End-of-text character \"The end-of-text character \" should not be inserted into thetranslation because texts are then truncated after this character. Use' instead.- Fastpath character: '&amp;' and '~'The character following the '&amp;' character is a fastpath character. Ifpossible, the fastpath character should be specified uniquely. Theunambiguity of the fastpath cannot be ensured without a test. If youcannot test the translation, you can ignore the fastpath character.Please follow these rules. Special characters must be correct in thetranslations.Description of objects and where they are used can be found here:http://service.sap.com/~form/handler?_APP=01100107900000000342&amp;_EVENT=DISPL_TXT&amp;_NNUM=150244&amp;</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000060')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UI',InstructionId='0000000060')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UI",
+			"InstructionId": "0000000060",
+			"InstructionShort": "test 2",
+			"InstructionLong": "<p>blablabla</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETERM',InstructionId='0000000059')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETERM',InstructionId='0000000059')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UIFILETERM",
+			"InstructionId": "0000000059",
+			"InstructionShort": "Instructions tests for Cloud translation and term",
+			"InstructionLong": "<p>blablabla</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETRSL',InstructionId='0000000052')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETRSL',InstructionId='0000000052')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UIFILETRSL",
+			"InstructionId": "0000000052",
+			"InstructionShort": "Instruction test!",
+			"InstructionLong": "<p><em><strong>This is a test! No, really.</strong></em></p>\n<p>&nbsp;</p>\n<p><em><strong>This is a <a href=\"http://www.sap.com\" target=\"_blank\">URL</a>.</strong></em></p>\n<p><em><strong>https://www.sap.com&nbsp;</strong></em></p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETRSL',InstructionId='0000000059')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETRSL',InstructionId='0000000059')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UIFILETRSL",
+			"InstructionId": "0000000059",
+			"InstructionShort": "Instructions tests for Cloud translation and term",
+			"InstructionLong": "<p>blablabla</p>"
+		}, {
+			"__metadata": {
+				"id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETRSL',InstructionId='0000000063')",
+				"uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/GSSLS/CUSTOMIZING_SRV/SubprojectTypeInstructions(SubprjType='UIFILETRSL',InstructionId='0000000063')",
+				"type": "/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction"
+			},
+			"SubprjType": "UIFILETRSL",
+			"InstructionId": "0000000063",
+			"InstructionShort": "hy43",
+			"InstructionLong": "<p>65</p>"
+		}]
+	}
+}

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="/GSSLS/CUSTOMIZING_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Workgroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId"/>
+                </Key>
+                <Property Name="ReadOnly" Type="Edm.Boolean" Nullable="false" sap:label="Read only" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkgroupNameReadOnly" Type="Edm.Boolean" Nullable="false" sap:label="Account Name Read only" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="WorkgroupName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Account" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="NoAuthReq" Type="Edm.Boolean" Nullable="false" sap:label="No auth. req." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AccountgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account Group ID" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="PrjTypeDescr" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Prj.Type Desc" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ReportingGroup" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reporting Group" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Obsolete" Type="Edm.Boolean" Nullable="false" sap:label="Obsolete" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="ToWorkgroupStakeholders" Relationship="/GSSLS/CUSTOMIZING_SRV.WorkgroupToWorkgroupStakeholder" FromRole="FromRole_WorkgroupToWorkgroupStakeholder" ToRole="ToRole_WorkgroupToWorkgroupStakeholder"/>
+                <NavigationProperty Name="ToWorkgroupSettings" Relationship="/GSSLS/CUSTOMIZING_SRV.WorkgroupToWorkgroupSettings" FromRole="FromRole_WorkgroupToWorkgroupSettings" ToRole="ToRole_WorkgroupToWorkgroupSettings"/>
+                <NavigationProperty Name="ToWorkgroupCustomerUsers" Relationship="/GSSLS/CUSTOMIZING_SRV.WorkgroupToWorkgroupCustomerUsers" FromRole="FromRole_WorkgroupToWorkgroupCustomerUsers" ToRole="ToRole_WorkgroupToWorkgroupCustomerUsers"/>
+            </EntityType>
+            <EntityType Name="WorkgroupSetting" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId"/>
+                    <PropertyRef Name="KeyCount"/>
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="KeyCount" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Key Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CostElementType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Cost Elem.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="CostElementValue" Type="Edm.String" Nullable="false" MaxLength="24" sap:label="Receiving Cost Elem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IoGroup" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="IO Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BdgApprover" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Approver" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BdgApproverFull" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Complete name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BudgetBucket" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Budget Bucket" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="WorkgroupStakeholder" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId"/>
+                    <PropertyRef Name="UserName"/>
+                    <PropertyRef Name="StkRole"/>
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserName" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StkRole" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Role" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StkRoleDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserNameFull" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Complete name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Obsolete" Type="Edm.Boolean" Nullable="false" sap:label="Obsolete" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsRequired" Type="Edm.Boolean" Nullable="false" sap:label="Is required" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SubprojectTypeInstruction" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SubprjType"/>
+                    <PropertyRef Name="InstructionId"/>
+                </Key>
+                <Property Name="SubprjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="SubprojectType" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InstructionId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Instruction ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InstructionShort" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Instruction short" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="InstructionLong" Type="Edm.String" Nullable="false" sap:label="Instruction long" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Instruction" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="InstructionId"/>
+                </Key>
+                <Property Name="InstructionId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Instruction ID" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="InstructionShort" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Instruction short"/>
+                <Property Name="InstructionLong" Type="Edm.String" Nullable="false" sap:label="Instruction long" sap:filterable="false"/>
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last changed on" sap:creatable="false" sap:updatable="false" sap:filterable="false"/>
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last changed by" sap:creatable="false" sap:updatable="false"/>
+                <NavigationProperty Name="ToSubprojectTypeInstructions" Relationship="/GSSLS/CUSTOMIZING_SRV.InstructionToSubprojectTypeInstructions" FromRole="FromRole_InstructionToSubprojectTypeInstructions" ToRole="ToRole_InstructionToSubprojectTypeInstructions"/>
+            </EntityType>
+            <EntityType Name="WorkgroupCustomerUser" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId"/>
+                    <PropertyRef Name="UserName"/>
+                    <PropertyRef Name="StkRole"/>
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserName" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StkRole" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Stakeholder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StkRoleDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserNameFull" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Complete name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Obsolete" Type="Edm.Boolean" Nullable="false" sap:label="Obsolete" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <ComplexType Name="AccountNameValid">
+                <Property Name="ValidAccountName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Account" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsDuplicate" Type="Edm.Boolean" Nullable="false" sap:label="Is duplicate" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <Association Name="InstructionToSubprojectTypeInstructions" sap:content-version="1">
+                <End Type="/GSSLS/CUSTOMIZING_SRV.Instruction" Multiplicity="1" Role="FromRole_InstructionToSubprojectTypeInstructions"/>
+                <End Type="/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction" Multiplicity="*" Role="ToRole_InstructionToSubprojectTypeInstructions"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_InstructionToSubprojectTypeInstructions">
+                        <PropertyRef Name="InstructionId"/>
+                    </Principal>
+                    <Dependent Role="ToRole_InstructionToSubprojectTypeInstructions">
+                        <PropertyRef Name="InstructionId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupCustomerUsers" sap:content-version="1">
+                <End Type="/GSSLS/CUSTOMIZING_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupCustomerUsers"/>
+                <End Type="/GSSLS/CUSTOMIZING_SRV.WorkgroupCustomerUser" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupCustomerUsers"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupCustomerUsers">
+                        <PropertyRef Name="WorkgroupId"/>
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupCustomerUsers">
+                        <PropertyRef Name="WorkgroupId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupSettings" sap:content-version="1">
+                <End Type="/GSSLS/CUSTOMIZING_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupSettings"/>
+                <End Type="/GSSLS/CUSTOMIZING_SRV.WorkgroupSetting" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupSettings"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupSettings">
+                        <PropertyRef Name="WorkgroupId"/>
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupSettings">
+                        <PropertyRef Name="WorkgroupId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupStakeholder" sap:content-version="1">
+                <End Type="/GSSLS/CUSTOMIZING_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupStakeholder"/>
+                <End Type="/GSSLS/CUSTOMIZING_SRV.WorkgroupStakeholder" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupStakeholder"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupStakeholder">
+                        <PropertyRef Name="WorkgroupId"/>
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupStakeholder">
+                        <PropertyRef Name="WorkgroupId"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="/GSSLS/CUSTOMIZING_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="Workgroups" EntityType="/GSSLS/CUSTOMIZING_SRV.Workgroup" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="WorkgroupSettings" EntityType="/GSSLS/CUSTOMIZING_SRV.WorkgroupSetting" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="WorkgroupStakeholders" EntityType="/GSSLS/CUSTOMIZING_SRV.WorkgroupStakeholder" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="SubprojectTypeInstructions" EntityType="/GSSLS/CUSTOMIZING_SRV.SubprojectTypeInstruction" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="Instructions" EntityType="/GSSLS/CUSTOMIZING_SRV.Instruction" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="WorkgroupCustomerUsers" EntityType="/GSSLS/CUSTOMIZING_SRV.WorkgroupCustomerUser" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="InstructionToSubprojectTypeInstrSet" Association="/GSSLS/CUSTOMIZING_SRV.InstructionToSubprojectTypeInstructions" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Instructions" Role="FromRole_InstructionToSubprojectTypeInstructions"/>
+                    <End EntitySet="SubprojectTypeInstructions" Role="ToRole_InstructionToSubprojectTypeInstructions"/>
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupStakeholderSet" Association="/GSSLS/CUSTOMIZING_SRV.WorkgroupToWorkgroupStakeholder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupStakeholder"/>
+                    <End EntitySet="WorkgroupStakeholders" Role="ToRole_WorkgroupToWorkgroupStakeholder"/>
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupSettingsSet" Association="/GSSLS/CUSTOMIZING_SRV.WorkgroupToWorkgroupSettings" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupSettings"/>
+                    <End EntitySet="WorkgroupSettings" Role="ToRole_WorkgroupToWorkgroupSettings"/>
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupCustomerUsersSet" Association="/GSSLS/CUSTOMIZING_SRV.WorkgroupToWorkgroupCustomerUsers" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupCustomerUsers"/>
+                    <End EntitySet="WorkgroupCustomerUsers" Role="ToRole_WorkgroupToWorkgroupCustomerUsers"/>
+                </AssociationSet>
+                <FunctionImport Name="AccountNameIsValid" ReturnType="/GSSLS/CUSTOMIZING_SRV.AccountNameValid" m:HttpMethod="GET" sap:label="Get valid account name + check if duplicate">
+                    <Parameter Name="AccountID" Type="Edm.String" Mode="In" MaxLength="6"/>
+                    <Parameter Name="PrjType" Type="Edm.String" Mode="In" MaxLength="10"/>
+                    <Parameter Name="AccountName" Type="Edm.String" Mode="In" MaxLength="30"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/CUSTOMIZING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/CUSTOMIZING_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,100 @@
+<mvc:View
+    controllerName="sapui5.worklist.custint.controller.Worklist"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic">
+
+    <semantic:SemanticPage
+        id="page"
+        headerPinnable="false"
+        toggleHeaderOnTitleClick="false">
+
+        <semantic:titleHeading>
+            <Title
+                text="{i18n>worklistTitle}"
+                level="H2"/>
+        </semantic:titleHeading>
+
+        <semantic:content>
+            <Table
+                id="table"
+                width="auto"
+                items="{
+                    path: '/Instructions',
+                    parameters: {
+                        $count: true
+                    }
+                }"
+                noDataText="{worklistView>/tableNoDataText}"
+                busyIndicatorDelay="{worklistView>/tableBusyDelay}"
+                growing="true"
+                growingScrollToLoad="true"
+                updateFinished="onUpdateFinished">
+
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title
+                            id="tableHeader"
+                            text="{worklistView>/worklistTableTitle}"
+                            level="H3"/>
+                        <ToolbarSpacer />
+                        <SearchField
+							id="searchField"
+                            placeholder="{i18n>searchFieldPlaceholder}"
+                            width="20%"
+							search="onSearch"/>
+                        <Button 
+                            icon="sap-icon://add"
+                            press="onOpenCreateDialog"
+                            class="sapUiSmallMarginEnd"/>
+                        <Button
+							id="sortUsersButton"
+                            tooltip="{i18n>sortButtonText}"
+                            icon="sap-icon://sort"
+							press="onSortPress"/>
+                    </OverflowToolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column id="nameColumn">
+                        <Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+                    </Column>
+                    <Column id="unitNumberColumn" hAlign="End">
+                        <Text text="{i18n>tableNameColumnInstructionShort}" id="unitNumberColumnTitle"/>
+                    </Column>
+                    <Column id="unitNumberColumn1" hAlign="End">
+                        <Text text="{i18n>tableNameColumnChUser}" id="unitNumberColumnTitle1"/>
+                    </Column>
+                    <Column id="unitNumberColumn2" hAlign="End">
+                        <Text text="{i18n>tableNameColumnChDate}" id="unitNumberColumnTitle2"/>
+                    </Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem
+                        type="Navigation"
+                        press=".onPress">
+                        <cells>
+                            <ObjectIdentifier title="{InstructionId}"/>
+                            <Text text="{InstructionShort}"></Text>
+                            <Text text="{
+                                path: 'ChDate',
+                                type: 'sap.ui.model.type.DateTime',
+                                formatOptions: {
+                                  pattern: 'dd/MM/yyyy HH:mm'
+                                }
+                              }"></Text>
+                            <Text text="{ChUser}"></Text>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </semantic:content>
+
+        <semantic:sendEmailAction>
+            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+        </semantic:sendEmailAction>
+          
+    </semantic:SemanticPage>
+    
+</mvc:View>
