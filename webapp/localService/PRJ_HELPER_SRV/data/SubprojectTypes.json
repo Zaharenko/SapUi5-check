@@ -1,0 +1,236 @@
+[
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('AV')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('AV')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "AV",
+                "Description": "Audiovisual translation, voice-over or subtitling",
+                "ContentType": "ASSET",
+                "PrjType": "MARKETING",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('AV')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('AV')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('AV')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('DTP')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('DTP')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "DTP",
+                "Description": "Marketing translation with DTP or formatting",
+                "ContentType": "ASSET",
+                "PrjType": "MARKETING",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('DTP')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('DTP')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('DTP')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('FILE_LAT')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('FILE_LAT')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "FILE_LAT",
+                "Description": "Testing (Language Acceptance Test)",
+                "ContentType": "UI_TESTSET",
+                "PrjType": "PRODFILE",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('FILE_LAT')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('FILE_LAT')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('FILE_LAT')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('LING_ONLY')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('LING_ONLY')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "LING_ONLY",
+                "Description": "Marketing translation without production",
+                "ContentType": "ASSET",
+                "PrjType": "MARKETING",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('LING_ONLY')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('LING_ONLY')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('LING_ONLY')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('OTHER')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('OTHER')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "OTHER",
+                "Description": "Other for others as asset type",
+                "ContentType": "ASSET",
+                "PrjType": "MARKETING",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('OTHER')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('OTHER')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('OTHER')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('TST_PRDT')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('TST_PRDT')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "TST_PRDT",
+                "Description": "Marketing translation and production with TST",
+                "ContentType": "ASSET",
+                "PrjType": "MARKETING",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('TST_PRDT')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('TST_PRDT')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('TST_PRDT')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UI')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UI')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "UI",
+                "Description": "All UI translations",
+                "ContentType": "SOFTCOMP",
+                "PrjType": "PRODUCT",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UI')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UI')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UI')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETERM')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETERM')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "UIFILETERM",
+                "Description": "Cross-product terminology",
+                "ContentType": "UI_FILESET",
+                "PrjType": "PRODFILE",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETERM')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETERM')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETERM')/ToWorkflows"
+                    }
+                }
+            },
+            {
+                "__metadata": {
+                    "id": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETRSL')",
+                    "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETRSL')",
+                    "type": "/GSSLS/PRJ_HELPER_SRV.SubprojectType"
+                },
+                "SubprjType": "UIFILETRSL",
+                "Description": "Translation of UI files",
+                "ContentType": "UI_FILESET",
+                "PrjType": "PRODFILE",
+                "ToSubprojectTypeInstructions": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETRSL')/ToSubprojectTypeInstructions"
+                    }
+                },
+                "ToAssetTypes": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETRSL')/ToAssetTypes"
+                    }
+                },
+                "ToWorkflows": {
+                    "__deferred": {
+                        "uri": "https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/SubprojectTypes('UIFILETRSL')/ToWorkflows"
+                    }
+                }
+            }
+]

@@ -1,0 +1,42 @@
+<mvc:View 
+  controllerName="sapui5.worklist.custint.controller.Object"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns:semantic="sap.f.semantic"
+  xmlns:richeditor="sap.ui.richtexteditor">
+  <Page title="{i18n>InstructionTitle}" showNavButton="true" navButtonPress="onNavBack" class="sapUiResponsiveContentPadding">
+    <content>
+      <VBox>
+        <!-- Add form fields and controls here -->
+        <Label text="{i18n>InstructionID}" />
+        <Input value="{InstructionId}" editable="false" class="sapUiTinyMarginBottom"/>
+        
+        <Label text="{i18n>ShortDescription}" />
+        <Input value="{InstructionShort}" editable="{objectPageModel>/isEditMode}" class="sapUiTinyMarginBottom"/>
+
+        <Label text="{i18n>LastChangedOn}" />
+        <Text text="{path: 'ChDate', formatter: '.formatChDate'}" class="sapUiTinyMarginBottom"/> 
+
+        <Label text="{i18n>LastChangedBy}" />
+        <Input value="{ChUser}" editable="false" class="sapUiTinyMarginBottom"/>  
+        
+        <Label text="{i18n>InstructionLong}" />
+        <richeditor:RichTextEditor value="{InstructionLong}" editable="{objectPageModel>/isEditMode}" id="instructionLongTextArea" height="300px" class="sapUiTinyMarginBottom"></richeditor:RichTextEditor>
+        <Label text="{i18n>Assigned Subproject Types}" />
+        <MultiComboBox editable="{objectPageModel>/isEditMode}" items="{path: 'helperModel>/SubprojectTypes'}" selectedKeys="{worklistView>/newInstruction/ToSubprojectTypeInstructions}" valueState="{validateModel>/ToSubprojectTypeInstructionsValueState}" valueStateText="{i18n>ToSubprojectTypeInstructionsValueStateErrorText}">
+          <core:Item key="{helperModel>SubprjType}" text="{helperModel>SubprjType}" />
+        </MultiComboBox>
+      </VBox>
+    </content>
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer />
+        <Button text="{i18n>editButtonText}" press="onEditPress" visible="{= !${objectPageModel>/isEditMode}}"/>
+        <Button text="{i18n>deleteButtonText}" press="onDeletePress" visible="{= !${objectPageModel>/isEditMode}}"/>
+        <Button text="{i18n>saveButtonText}" press="onSavePress" visible="{objectPageModel>/isEditMode}" />
+        <Button text="{i18n>cancelButtonText}" press="onCancelPress" visible="{objectPageModel>/isEditMode}" />
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>
