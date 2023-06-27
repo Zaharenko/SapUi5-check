@@ -1,0 +1,959 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="/GSSLS/PRJ_HELPER_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Language" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SlsLang" />
+                </Key>
+                <Property Name="SlsLang" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Target Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Sourcelang" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Source Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsR3Lang" Type="Edm.Boolean" Nullable="false" sap:label="SE63 Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="LangGroup" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Language Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Laiso" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="SAP Language Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsMarkLang" Type="Edm.Boolean" Nullable="false" sap:label="Marketing Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SlsLangIso" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Target Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ObjectLevel" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Object Level" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="LangLong" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Language Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="ProjectType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PrjType" />
+                </Key>
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Prj.Type Desc" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="CENotifType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="CE Notif.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AllowAddLanguage" Type="Edm.Boolean" Nullable="false" sap:label="Allow add lang." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AddLangUntilLangSts" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Add lang. until sts." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="ToStakeholderRoles" Relationship="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToStakeholderRoles" FromRole="FromRole_ProjectTypeToStakeholderRoles" ToRole="ToRole_ProjectTypeToStakeholderRoles" />
+                <NavigationProperty Name="ToWorkgroups" Relationship="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToWorkgroups" FromRole="FromRole_ProjectTypeToWorkgroups" ToRole="ToRole_ProjectTypeToWorkgroups" />
+                <NavigationProperty Name="ToAssetTypes" Relationship="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToAssetTypes" FromRole="FromRole_ProjectTypeToAssetTypes" ToRole="ToRole_ProjectTypeToAssetTypes" />
+                <NavigationProperty Name="ToSubprojectTypes" Relationship="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToSubprojectTypes" FromRole="FromRole_ProjectTypeToSubprojectTypes" ToRole="ToRole_ProjectTypeToSubprojectTypes" />
+            </EntityType>
+            <EntityType Name="Tool" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ToolId" />
+                </Key>
+                <Property Name="ToolId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tool ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ToolName" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Tool Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="SubprojectType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SubprjType" />
+                </Key>
+                <Property Name="SubprjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Subprj.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Subpr.Type Desc" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ContentType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Content Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <NavigationProperty Name="ToSubprojectTypeInstructions" Relationship="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeToSubprojectTypeInstr" FromRole="FromRole_SubprojectTypeToSubprojectTypeInstr" ToRole="ToRole_SubprojectTypeToSubprojectTypeInstr" />
+                <NavigationProperty Name="ToAssetTypes" Relationship="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeToAssetTypes" FromRole="FromRole_SubprojectTypeToAssetTypes" ToRole="ToRole_SubprojectTypeToAssetTypes" />
+                <NavigationProperty Name="ToWorkflows" Relationship="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeToWorkflows" FromRole="FromRole_SubprojectTypeToWorkflows" ToRole="ToRole_SubprojectTypeToWorkflows" />
+            </EntityType>
+            <EntityType Name="AssetType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AssetTypeId" />
+                </Key>
+                <Property Name="AssetTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Asset Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SortOrder" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sort Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AssetTypeDescr" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Dscr.of A.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="NoCeNotif" Type="Edm.Boolean" Nullable="false" sap:label="No CE Notification" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AssetTypeDescrLong" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Long Descr. of AseetType" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SubprjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Subprj.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="IOGroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="IoGroupId" />
+                </Key>
+                <Property Name="IoGroupId" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="IO Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="PrgCatId1" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Product Level 0" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ShipmentType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Product Level 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SubPrgCatId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Product Level 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SlsServiceId" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="SLS Service" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IogrComment" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Comment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IoGroupUc" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="IO Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="CostElementType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CostElementTypeId" />
+                </Key>
+                <Property Name="CostElementTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Lower_value" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="CostElementTypeDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short Descript." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="WorkflowStep" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkflowId" />
+                    <PropertyRef Name="ServiceStep" />
+                </Key>
+                <Property Name="WorkflowId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Workflow" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ServiceStep" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Step" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="StepText" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Step Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SortOrder" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sort Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Langspec" Type="Edm.Boolean" Nullable="false" sap:label="Language Specific" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TimelineOnly" Type="Edm.Boolean" Nullable="false" sap:label="Timeline Only" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReqContent" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="ToWorkflowActivities" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkflowStepToWorkflowActivities" FromRole="FromRole_WorkflowStepToWorkflowActivities" ToRole="ToRole_WorkflowStepToWorkflowActivities" />
+            </EntityType>
+            <EntityType Name="WorkflowActivity" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkflowId" />
+                    <PropertyRef Name="ServiceStep" />
+                    <PropertyRef Name="ServiceActivity" />
+                </Key>
+                <Property Name="WorkflowId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Workflow" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ServiceStep" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Step" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="StepText" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Step Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ServiceActivity" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Activity" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ActivityText" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Activity Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SortOrder" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sort Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ContentType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ContentTypeId" />
+                </Key>
+                <Property Name="ContentTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Content Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsSoftComp" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ContentTypeDescr" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Cont.T.Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <NavigationProperty Name="ToToolType" Relationship="/GSSLS/PRJ_HELPER_SRV.ContentTypeToToolTypes" FromRole="FromRole_ContentTypeToToolTypes" ToRole="ToRole_ContentTypeToToolTypes" />
+            </EntityType>
+            <EntityType Name="ToolType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ContentType" />
+                    <PropertyRef Name="ToolTypeId" />
+                </Key>
+                <Property Name="ContentType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Content Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FilePathRequired" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ToolTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tool Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsDefault" Type="Edm.Boolean" Nullable="false" sap:label="Is Default" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SystemRequired" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ToolTypeDescr" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Tool.T.Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="ToToolTypePrjPath" Relationship="/GSSLS/PRJ_HELPER_SRV.ToolTypeToToolTypePrjPathes" FromRole="FromRole_ToolTypeToToolTypePrjPathes" ToRole="ToRole_ToolTypeToToolTypePrjPathes" />
+            </EntityType>
+            <EntityType Name="RequestType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RequestTypeId" />
+                </Key>
+                <Property Name="RequestTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Request Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="RequestTypeDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="DevSystem" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="DevSystemId" />
+                    <PropertyRef Name="SystemName" />
+                    <PropertyRef Name="SystemOwner" />
+                    <PropertyRef Name="SystemClient" />
+                </Key>
+                <Property Name="DevSystemId" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Dev. System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SystemName" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Transl. System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SystemOwner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System Owner" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SystemClient" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Transl. Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TranslAreaIdGrp" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Transl. Area ID Grp." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="EvalParameter" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="EvlParameter" />
+                </Key>
+                <Property Name="EvlParameter" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Parameter ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TranslSystem" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Transl. System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SystemOwner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System Owner" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TranslClient" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Transl. Client" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="EvlParameterText" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Evaluation Parameter" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="TranslAreaIdGrp" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Transl. Area ID Grp." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="MaterialNumber" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="MatnrTranslationId" />
+                </Key>
+                <Property Name="MatnrTranslationId" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="Materi. for transl." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="MatnrTranslationDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="TermProject" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProjectId" />
+                </Key>
+                <Property Name="ProjectId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Term. Project ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ProjectName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Term. Project Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ProjectNamelong" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Project Long Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Deactivated" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Deactivated Project" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="FileFormat" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="FileFormatId" />
+                </Key>
+                <Property Name="FileFormatId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="File Format ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="FileFormatType" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="File Format" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="WorkgroupIOGroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                    <PropertyRef Name="IoGroup" />
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IoGroup" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="IO Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="WorkgroupCostElement" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                    <PropertyRef Name="CostElementType" />
+                    <PropertyRef Name="CostElementValue" />
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CostElementType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Cost Elem.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CostElementValue" Type="Edm.String" Nullable="false" MaxLength="24" sap:label="Receiving Cost Elem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="WorkgroupApprover" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                    <PropertyRef Name="BdgApprover" />
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="BdgApprover" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Approver" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="TimeZone" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Tzone" />
+                </Key>
+                <Property Name="Tzone" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Time Zone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Time Zone Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="Folder" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="FolderName" />
+                    <PropertyRef Name="UniqueId" />
+                </Key>
+                <Property Name="FolderName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Folder Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="UniqueId" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Unique ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SortOrder" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Sort Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AddLanguage" Type="Edm.Boolean" Nullable="false" sap:label="Add Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ProcUIVersion" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Process UI Version" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="PronunciationGuide" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SlsLang" />
+                    <PropertyRef Name="ScriptText" />
+                </Key>
+                <Property Name="SlsLang" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Target Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ScriptText" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Script Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="Pronunciation" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Pronunciation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ProjectStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProjectStatusId" />
+                </Key>
+                <Property Name="ProjectStatusId" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Project Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="StatusDscr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Status Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsSubprjStatus" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="CostEstimateStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CeStatus" />
+                </Key>
+                <Property Name="CeStatus" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Cost Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="StatusDscr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Status Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="ProjectStep" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ServiceStep" />
+                </Key>
+                <Property Name="ServiceStep" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Step" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="StepText" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Step Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="StakeholderUser" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="StkRole" />
+                    <PropertyRef Name="UserName" />
+                </Key>
+                <Property Name="StkRole" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Role" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="UserName" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="StkRoleDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="UserNameFull" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="User Full Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="StakeholderRole" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ProjectType" />
+                    <PropertyRef Name="StkRole" />
+                </Key>
+                <Property Name="ProjectType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="StkRole" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Role" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="StkRoleDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsRequired" Type="Edm.Boolean" Nullable="false" sap:label="Is required" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsLangspec" Type="Edm.Boolean" Nullable="false" sap:label="Language Specific" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsMultiple" Type="Edm.Boolean" Nullable="false" sap:label="Multiple Stakeholder" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsForStartUI" Type="Edm.Boolean" Nullable="false" sap:label="For Start UI" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsSprjTypeFilter" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SortOrder" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Sort Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SubprjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Subprj.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="GlobalGraph" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="GlobalGraphId" />
+                </Key>
+                <Property Name="GlobalGraphId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Global Graph" sap:creatable="false" sap:updatable="false" />
+                <Property Name="TranslSystem" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Translation System" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="TranslClient" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Translation Client" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="TranslAreaIdGrp" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Translation Area Grp." sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SystemOwner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System Owner" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="ParentObject" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Parent" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Object" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Object" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="GlobalGraphGroup" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Group" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="SoftComponent" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Software Component" sap:creatable="false" sap:updatable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Graph Description" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="IsDefault" Type="Edm.Boolean" Nullable="false" sap:label="Default" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="Tree" Type="Edm.Boolean" Nullable="false" sap:label="Tree" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="Selected" Type="Edm.Boolean" Nullable="false" sap:label="Selected" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="GlobalGraphStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status" />
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="GG Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="StatusDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="GlobalGraphLanguageStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Status" />
+                </Key>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="StatusDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ApplicationHierarchyOption" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ApplicationHierarchyOptionId" />
+                </Key>
+                <Property Name="ApplicationHierarchyOptionId" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Rule Option" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="SoftCompReleaseSortOrderStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SortOrderStatus" />
+                </Key>
+                <Property Name="SortOrderStatus" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Sort Order Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SortOrderStatusDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="TranslationRelevance" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="TranslationDepth" />
+                </Key>
+                <Property Name="TranslationDepth" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Translation depth" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="TranslationDepthText" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="Workflow" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkflowId" />
+                </Key>
+                <Property Name="WorkflowId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Workflow" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SubprjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Subprj.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="WorkflowDescr" Type="Edm.String" Nullable="false" MaxLength="250" sap:label="Workflow Descr." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="AllowPartialDelivery" Type="Edm.Boolean" Nullable="false" sap:label="Allow Part. Delivery" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <NavigationProperty Name="ToWorkflowSteps" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkflowToWorkflowSteps" FromRole="FromRole_WorkflowToWorkflowSteps" ToRole="ToRole_WorkflowToWorkflowSteps" />
+            </EntityType>
+            <EntityType Name="Program" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PrgId" />
+                </Key>
+                <Property Name="PrgId" Type="Edm.Guid" Nullable="false" sap:label="SAP Program ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IntPrgName" Type="Edm.String" Nullable="false" MaxLength="50" sap:label="Program Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="OffPrdName" Type="Edm.String" Nullable="false" MaxLength="150" sap:label="Off. Product Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="DevUnitId" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Development Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="DelUnitId" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Delivery Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortfolioSubCat1" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sub Category 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortfolioSubCat2" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Sub Category 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SlsAccMang" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Delivery Manager" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PrgPhase" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Program Phase" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PrgStatus" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Program Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PortfolioCat" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Portfolio Category" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="WorkgroupUser" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                    <PropertyRef Name="CustomerUser" />
+                    <PropertyRef Name="StkRole" />
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Workgroup ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="CustomerUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="StkRole" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Role" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="UserName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Complete name" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="Workgroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                </Key>
+                <Property Name="NoAuthReq" Type="Edm.Boolean" Nullable="false" sap:label="No auth. req." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Workgroup ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="AccountgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account Group ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="WorkgroupName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Workgroup" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="PrjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Project Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="ReportingGroup" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reporting Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <NavigationProperty Name="ToWorkgroupUsers" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupUsers" FromRole="FromRole_WorkgroupToWorkgroupUsers" ToRole="ToRole_WorkgroupToWorkgroupUsers" />
+                <NavigationProperty Name="ToWorkgroupApprover" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupApprover" FromRole="FromRole_WorkgroupToWorkgroupApprover" ToRole="ToRole_WorkgroupToWorkgroupApprover" />
+                <NavigationProperty Name="ToWorkgroupIOGroup" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupIOGroup" FromRole="FromRole_WorkgroupToWorkgroupIOGroup" ToRole="ToRole_WorkgroupToWorkgroupIOGroup" />
+                <NavigationProperty Name="ToWorkgroupCostElement" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupCostElement" FromRole="FromRole_WorkgroupToWorkgroupCostElement" ToRole="ToRole_WorkgroupToWorkgroupCostElement" />
+                <NavigationProperty Name="ToWorkgroupSetting" Relationship="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupSetting" FromRole="FromRole_WorkgroupToWorkgroupSetting" ToRole="ToRole_WorkgroupToWorkgroupSetting" />
+            </EntityType>
+            <EntityType Name="DevUnit" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="OrgUnitId" />
+                </Key>
+                <Property Name="OrgUnitId" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Org. Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="OrgUnitName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Org. Unit (Descr.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsDevelopUnit" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsDeliveryUnit" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="System" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="TranslSystem" />
+                    <PropertyRef Name="SystemOwner" />
+                    <PropertyRef Name="TranslClient" />
+                </Key>
+                <Property Name="TranslSystem" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Transl. System" sap:creatable="false" sap:updatable="false" />
+                <Property Name="SystemOwner" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System Owner" sap:creatable="false" sap:updatable="false" />
+                <Property Name="TranslClient" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Transl. Client" sap:creatable="false" sap:updatable="false" />
+                <Property Name="RfcDestination" Type="Edm.String" Nullable="false" MaxLength="32" sap:label="Destination" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="SismSysdescr" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="System Description" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="BasisRelease" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Basis Release" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="CentralSystem" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Central System" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="TranslArea" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Translation Area" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="Solcontrols" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Sol controls enabled" sap:creatable="false" sap:updatable="false" sap:filterable="false" />
+                <Property Name="AllSystems" Type="Edm.Boolean" Nullable="false" sap:label="All Systems" sap:creatable="false" sap:updatable="false" />
+                <NavigationProperty Name="ToDevSystems" Relationship="/GSSLS/PRJ_HELPER_SRV.SystemToDevSystems" FromRole="FromRole_SystemToDevSystems" ToRole="ToRole_SystemToDevSystems" />
+                <NavigationProperty Name="ToEvalParameters" Relationship="/GSSLS/PRJ_HELPER_SRV.SystemToEvalParameters" FromRole="FromRole_SystemToEvalParameters" ToRole="ToRole_SystemToEvalParameters" />
+                <NavigationProperty Name="ToGlobalGraphs" Relationship="/GSSLS/PRJ_HELPER_SRV.SystemToGlobalGraphs" FromRole="FromRole_SystemToGlobalGraphs" ToRole="ToRole_SystemToGlobalGraphs" />
+            </EntityType>
+            <EntityType Name="SystemType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SystemTypeId" />
+                </Key>
+                <Property Name="SystemTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="System Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SystemTypeDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="BudgetBucket" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="BudgetBucketId" />
+                </Key>
+                <Property Name="BudgetBucketId" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Budget Bucket" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="BudgetBuckett" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Budget Bucket" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SlsServiceId" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="SLS Service" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Obsolete" Type="Edm.Boolean" Nullable="false" sap:label="Obsolete" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ObsoleteFrom" Type="Edm.DateTime" Precision="7" sap:label="Obsolete From" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="SMRTLConnectorPrj" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SmrtlPrjId" />
+                </Key>
+                <Property Name="SmrtlPrjId" Type="Edm.String" Nullable="false" MaxLength="36" sap:label="Smartling Project ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="SmrtlPrjName" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Smartling Prj.Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="SourceLanguage" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SlsLang" />
+                </Key>
+                <Property Name="SlsLang" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Target Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsR3Lang" Type="Edm.Boolean" Nullable="false" sap:label="SE63 Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="LangGroup" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Language Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Laiso" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="SAP Language Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsMarkLang" Type="Edm.Boolean" Nullable="false" sap:label="Marketing Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="SlsLangIso" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Target Language" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LangLong" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Language Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="SubprojectTypeInstruction" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="SubprjType" />
+                    <PropertyRef Name="InstructionId" />
+                </Key>
+                <Property Name="SubprjType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Subprj.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="InstructionId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Instruction ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="InstructionShort" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Instruction Short" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="InstructionLong" Type="Edm.String" Nullable="false" sap:label="Instruction Long" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="WorkgroupSetting" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                    <PropertyRef Name="KeyCount" />
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="KeyCount" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Key Count" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CostElementType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Cost Elem.Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="CostElementValue" Type="Edm.String" Nullable="false" MaxLength="24" sap:label="Receiving Cost Elem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IoGroup" Type="Edm.String" Nullable="false" MaxLength="18" sap:label="IO Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="BdgApprover" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Approver" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="BdgApproverName" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Approver Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ProjectWorkgroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WorkgroupId" />
+                </Key>
+                <Property Name="WorkgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Workgroup ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="WorkgroupName" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Workgroup" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="CENotificationType" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CENotifTypeId" />
+                </Key>
+                <Property Name="CENotifTypeId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="CENotifTypeDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="30 Characters" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="UserStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UserStatusId" />
+                </Key>
+                <Property Name="UserStatusId" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="User Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="UserStatusDescr" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="TranslatorProfile" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Prof" />
+                </Key>
+                <Property Name="Prof" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="Version Number Component" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Text Line 60 Chars" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+                <Property Name="IsPartner" Type="Edm.Boolean" Nullable="false" sap:label="Is Partner" sap:creatable="false" sap:updatable="false" sap:sortable="false" />
+            </EntityType>
+            <EntityType Name="ReportingGroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ReportingGroupId" />
+                </Key>
+                <Property Name="ReportingGroupId" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Reporting Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ReportingGroupDesc" Type="Edm.String" Nullable="false" MaxLength="100" sap:label="Reporting Grp. Desc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Obsolete" Type="Edm.Boolean" Nullable="false" sap:label="Obsolete" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="AccountGroup" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AccountgroupId" />
+                </Key>
+                <Property Name="AccountgroupId" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Account Group ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Accountgroup" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Account Group" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Obsolete" Type="Edm.Boolean" Nullable="false" sap:label="Obsolete" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ChUser" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Last Changed By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ChDate" Type="Edm.DateTime" Precision="7" sap:label="Last Changed On" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="LanguageStatus" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="LangStatus" />
+                </Key>
+                <Property Name="LangStatus" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Language Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="LangStatusText" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Language Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <EntityType Name="ToolTypePrjPath" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ToolTypeID" />
+                    <PropertyRef Name="PathName" />
+                </Key>
+                <Property Name="ToolTypeID" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Tool Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="ContentType" Type="Edm.String" Nullable="false" MaxLength="10" sap:label="Content Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="PathName" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Tool Path Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="Path" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Tool Path" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </EntityType>
+            <ComplexType Name="CostElementValid">
+                <Property Name="CostElementDescription" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="Receiving Cost Elem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+                <Property Name="IsValid" Type="Edm.Boolean" Nullable="false" sap:label="Yes/No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" />
+            </ComplexType>
+            <Association Name="ContentTypeToToolTypes" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ContentType" Multiplicity="1" Role="FromRole_ContentTypeToToolTypes" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ToolType" Multiplicity="*" Role="ToRole_ContentTypeToToolTypes" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ContentTypeToToolTypes">
+                        <PropertyRef Name="ContentTypeId" />
+                    </Principal>
+                    <Dependent Role="ToRole_ContentTypeToToolTypes">
+                        <PropertyRef Name="ContentType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkflowToWorkflowSteps" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workflow" Multiplicity="1" Role="FromRole_WorkflowToWorkflowSteps" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkflowStep" Multiplicity="*" Role="ToRole_WorkflowToWorkflowSteps" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkflowToWorkflowSteps">
+                        <PropertyRef Name="WorkflowId" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkflowToWorkflowSteps">
+                        <PropertyRef Name="WorkflowId" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ToolTypeToToolTypePrjPathes" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ToolType" Multiplicity="1" Role="FromRole_ToolTypeToToolTypePrjPathes" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ToolTypePrjPath" Multiplicity="*" Role="ToRole_ToolTypeToToolTypePrjPathes" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ToolTypeToToolTypePrjPathes">
+                        <PropertyRef Name="ToolTypeId" />
+                        <PropertyRef Name="ContentType" />
+                    </Principal>
+                    <Dependent Role="ToRole_ToolTypeToToolTypePrjPathes">
+                        <PropertyRef Name="ToolTypeID" />
+                        <PropertyRef Name="ContentType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProjectTypeAssetTypes" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ProjectType" Multiplicity="0..1" Role="FromRole_ProjectTypeAssetTypes" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.AssetType" Multiplicity="*" Role="ToRole_ProjectTypeAssetTypes" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProjectTypeAssetTypes">
+                        <PropertyRef Name="PrjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProjectTypeAssetTypes">
+                        <PropertyRef Name="PrjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProjectTypeToAssetTypes" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ProjectType" Multiplicity="1" Role="FromRole_ProjectTypeToAssetTypes" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.AssetType" Multiplicity="*" Role="ToRole_ProjectTypeToAssetTypes" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProjectTypeToAssetTypes">
+                        <PropertyRef Name="PrjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProjectTypeToAssetTypes">
+                        <PropertyRef Name="PrjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProjectTypeToWorkgroups" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ProjectType" Multiplicity="0..1" Role="FromRole_ProjectTypeToWorkgroups" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workgroup" Multiplicity="*" Role="ToRole_ProjectTypeToWorkgroups" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProjectTypeToWorkgroups">
+                        <PropertyRef Name="PrjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProjectTypeToWorkgroups">
+                        <PropertyRef Name="PrjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProjectTypeToStakeholderRoles" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ProjectType" Multiplicity="1" Role="FromRole_ProjectTypeToStakeholderRoles" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.StakeholderRole" Multiplicity="*" Role="ToRole_ProjectTypeToStakeholderRoles" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProjectTypeToStakeholderRoles">
+                        <PropertyRef Name="PrjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProjectTypeToStakeholderRoles">
+                        <PropertyRef Name="ProjectType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProjectTypeToSubprojectTypes" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.ProjectType" Multiplicity="1" Role="FromRole_ProjectTypeToSubprojectTypes" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.SubprojectType" Multiplicity="*" Role="ToRole_ProjectTypeToSubprojectTypes" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ProjectTypeToSubprojectTypes">
+                        <PropertyRef Name="PrjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_ProjectTypeToSubprojectTypes">
+                        <PropertyRef Name="SubprjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupUsers" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupUsers" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkgroupUser" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupUsers" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupUsers">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupUsers">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupApprover" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupApprover" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkgroupApprover" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupApprover" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupApprover">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupApprover">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupIOGroup" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupIOGroup" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkgroupIOGroup" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupIOGroup" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupIOGroup">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupIOGroup">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupCostElement" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupCostElement" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkgroupCostElement" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupCostElement" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupCostElement">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupCostElement">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkgroupToWorkgroupSetting" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workgroup" Multiplicity="1" Role="FromRole_WorkgroupToWorkgroupSetting" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkgroupSetting" Multiplicity="*" Role="ToRole_WorkgroupToWorkgroupSetting" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkgroupToWorkgroupSetting">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkgroupToWorkgroupSetting">
+                        <PropertyRef Name="WorkgroupId" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SystemToDevSystems" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.System" Multiplicity="1" Role="FromRole_SystemToDevSystems" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.DevSystem" Multiplicity="*" Role="ToRole_SystemToDevSystems" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SystemToDevSystems">
+                        <PropertyRef Name="TranslClient" />
+                        <PropertyRef Name="SystemOwner" />
+                        <PropertyRef Name="TranslSystem" />
+                    </Principal>
+                    <Dependent Role="ToRole_SystemToDevSystems">
+                        <PropertyRef Name="SystemClient" />
+                        <PropertyRef Name="SystemOwner" />
+                        <PropertyRef Name="SystemName" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SystemToEvalParameters" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.System" Multiplicity="1" Role="FromRole_SystemToEvalParameters" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.EvalParameter" Multiplicity="*" Role="ToRole_SystemToEvalParameters" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SystemToEvalParameters">
+                        <PropertyRef Name="TranslSystem" />
+                        <PropertyRef Name="SystemOwner" />
+                        <PropertyRef Name="TranslClient" />
+                    </Principal>
+                    <Dependent Role="ToRole_SystemToEvalParameters">
+                        <PropertyRef Name="TranslSystem" />
+                        <PropertyRef Name="SystemOwner" />
+                        <PropertyRef Name="TranslClient" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SystemToGlobalGraphs" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.System" Multiplicity="1" Role="FromRole_SystemToGlobalGraphs" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.GlobalGraph" Multiplicity="*" Role="ToRole_SystemToGlobalGraphs" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SystemToGlobalGraphs">
+                        <PropertyRef Name="TranslClient" />
+                        <PropertyRef Name="SystemOwner" />
+                        <PropertyRef Name="TranslSystem" />
+                    </Principal>
+                    <Dependent Role="ToRole_SystemToGlobalGraphs">
+                        <PropertyRef Name="TranslClient" />
+                        <PropertyRef Name="SystemOwner" />
+                        <PropertyRef Name="TranslSystem" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SubprojectTypeToWorkflows" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.SubprojectType" Multiplicity="1" Role="FromRole_SubprojectTypeToWorkflows" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.Workflow" Multiplicity="*" Role="ToRole_SubprojectTypeToWorkflows" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SubprojectTypeToWorkflows">
+                        <PropertyRef Name="SubprjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_SubprojectTypeToWorkflows">
+                        <PropertyRef Name="SubprjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SubprojectTypeToAssetTypes" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.SubprojectType" Multiplicity="1" Role="FromRole_SubprojectTypeToAssetTypes" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.AssetType" Multiplicity="*" Role="ToRole_SubprojectTypeToAssetTypes" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SubprojectTypeToAssetTypes">
+                        <PropertyRef Name="SubprjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_SubprojectTypeToAssetTypes">
+                        <PropertyRef Name="SubprjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SubprojectTypeToSubprojectTypeInstr" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.SubprojectType" Multiplicity="1" Role="FromRole_SubprojectTypeToSubprojectTypeInstr" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeInstruction" Multiplicity="*" Role="ToRole_SubprojectTypeToSubprojectTypeInstr" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SubprojectTypeToSubprojectTypeInstr">
+                        <PropertyRef Name="SubprjType" />
+                    </Principal>
+                    <Dependent Role="ToRole_SubprojectTypeToSubprojectTypeInstr">
+                        <PropertyRef Name="SubprjType" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="WorkflowStepToWorkflowActivities" sap:content-version="1">
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkflowStep" Multiplicity="1" Role="FromRole_WorkflowStepToWorkflowActivities" />
+                <End Type="/GSSLS/PRJ_HELPER_SRV.WorkflowActivity" Multiplicity="*" Role="ToRole_WorkflowStepToWorkflowActivities" />
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_WorkflowStepToWorkflowActivities">
+                        <PropertyRef Name="WorkflowId" />
+                        <PropertyRef Name="ServiceStep" />
+                    </Principal>
+                    <Dependent Role="ToRole_WorkflowStepToWorkflowActivities">
+                        <PropertyRef Name="WorkflowId" />
+                        <PropertyRef Name="ServiceStep" />
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="/GSSLS/PRJ_HELPER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="Languages" EntityType="/GSSLS/PRJ_HELPER_SRV.Language" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ProjectTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.ProjectType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="Tools" EntityType="/GSSLS/PRJ_HELPER_SRV.Tool" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="SubprojectTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.SubprojectType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="AssetTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.AssetType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="IOGroups" EntityType="/GSSLS/PRJ_HELPER_SRV.IOGroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="CostElementTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.CostElementType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="WorkflowSteps" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkflowStep" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="WorkflowActivities" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkflowActivity" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ContentTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.ContentType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ToolTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.ToolType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="RequestTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.RequestType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="DevSystems" EntityType="/GSSLS/PRJ_HELPER_SRV.DevSystem" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="EvalParameters" EntityType="/GSSLS/PRJ_HELPER_SRV.EvalParameter" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="MaterialNumbers" EntityType="/GSSLS/PRJ_HELPER_SRV.MaterialNumber" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="TermProjects" EntityType="/GSSLS/PRJ_HELPER_SRV.TermProject" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <EntitySet Name="FileFormats" EntityType="/GSSLS/PRJ_HELPER_SRV.FileFormat" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="WorkgroupIOGroups" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkgroupIOGroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <EntitySet Name="WorkgroupCostElements" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkgroupCostElement" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <EntitySet Name="WorkgroupApprovers" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkgroupApprover" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <EntitySet Name="TimeZones" EntityType="/GSSLS/PRJ_HELPER_SRV.TimeZone" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="Folders" EntityType="/GSSLS/PRJ_HELPER_SRV.Folder" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="PronunciationGuides" EntityType="/GSSLS/PRJ_HELPER_SRV.PronunciationGuide" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ProjectStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.ProjectStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="CostEstimateStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.CostEstimateStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ProjectSteps" EntityType="/GSSLS/PRJ_HELPER_SRV.ProjectStep" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="StakeholderUsers" EntityType="/GSSLS/PRJ_HELPER_SRV.StakeholderUser" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="StakeholderRoles" EntityType="/GSSLS/PRJ_HELPER_SRV.StakeholderRole" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="GlobalGraphs" EntityType="/GSSLS/PRJ_HELPER_SRV.GlobalGraph" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="GlobalGraphStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.GlobalGraphStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="GlobalGraphLanguageStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.GlobalGraphLanguageStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ApplicationHierarchyOptions" EntityType="/GSSLS/PRJ_HELPER_SRV.ApplicationHierarchyOption" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="SoftCompReleaseSortOrderStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.SoftCompReleaseSortOrderStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="TranslationRelevances" EntityType="/GSSLS/PRJ_HELPER_SRV.TranslationRelevance" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="Workflows" EntityType="/GSSLS/PRJ_HELPER_SRV.Workflow" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <EntitySet Name="Programs" EntityType="/GSSLS/PRJ_HELPER_SRV.Program" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="WorkgroupUsers" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkgroupUser" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="Workgroups" EntityType="/GSSLS/PRJ_HELPER_SRV.Workgroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="DevUnits" EntityType="/GSSLS/PRJ_HELPER_SRV.DevUnit" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="Systems" EntityType="/GSSLS/PRJ_HELPER_SRV.System" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="SystemTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.SystemType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="BudgetBuckets" EntityType="/GSSLS/PRJ_HELPER_SRV.BudgetBucket" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="SMRTLConnectorPrjs" EntityType="/GSSLS/PRJ_HELPER_SRV.SMRTLConnectorPrj" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="SourceLanguages" EntityType="/GSSLS/PRJ_HELPER_SRV.SourceLanguage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="SubprojectTypeInstructions" EntityType="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeInstruction" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="WorkgroupSettings" EntityType="/GSSLS/PRJ_HELPER_SRV.WorkgroupSetting" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ProjectWorkgroups" EntityType="/GSSLS/PRJ_HELPER_SRV.ProjectWorkgroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="CENotificationTypes" EntityType="/GSSLS/PRJ_HELPER_SRV.CENotificationType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="UserStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.UserStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="TranslatorProfiles" EntityType="/GSSLS/PRJ_HELPER_SRV.TranslatorProfile" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="ReportingGroups" EntityType="/GSSLS/PRJ_HELPER_SRV.ReportingGroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="AccountGroups" EntityType="/GSSLS/PRJ_HELPER_SRV.AccountGroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1" />
+                <EntitySet Name="LanguageStatuses" EntityType="/GSSLS/PRJ_HELPER_SRV.LanguageStatus" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <EntitySet Name="ToolTypePrjPaths" EntityType="/GSSLS/PRJ_HELPER_SRV.ToolTypePrjPath" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1" />
+                <AssociationSet Name="WorkflowToWorkflowSteps_AssocSet" Association="/GSSLS/PRJ_HELPER_SRV.WorkflowToWorkflowSteps" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workflows" Role="FromRole_WorkflowToWorkflowSteps" />
+                    <End EntitySet="WorkflowSteps" Role="ToRole_WorkflowToWorkflowSteps" />
+                </AssociationSet>
+                <AssociationSet Name="ProjectTypesToSubprojectTypesSet" Association="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToSubprojectTypes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProjectTypes" Role="FromRole_ProjectTypeToSubprojectTypes" />
+                    <End EntitySet="SubprojectTypes" Role="ToRole_ProjectTypeToSubprojectTypes" />
+                </AssociationSet>
+                <AssociationSet Name="WorkflowStepToWorkflowActivities_AssocSe" Association="/GSSLS/PRJ_HELPER_SRV.WorkflowStepToWorkflowActivities" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="WorkflowSteps" Role="FromRole_WorkflowStepToWorkflowActivities" />
+                    <End EntitySet="WorkflowActivities" Role="ToRole_WorkflowStepToWorkflowActivities" />
+                </AssociationSet>
+                <AssociationSet Name="ProjectTypesAssetTypesSet" Association="/GSSLS/PRJ_HELPER_SRV.ProjectTypeAssetTypes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProjectTypes" Role="FromRole_ProjectTypeAssetTypes" />
+                    <End EntitySet="AssetTypes" Role="ToRole_ProjectTypeAssetTypes" />
+                </AssociationSet>
+                <AssociationSet Name="ToolTypeToToolTypePrjPathesSet" Association="/GSSLS/PRJ_HELPER_SRV.ToolTypeToToolTypePrjPathes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ToolTypes" Role="FromRole_ToolTypeToToolTypePrjPathes" />
+                    <End EntitySet="ToolTypePrjPaths" Role="ToRole_ToolTypeToToolTypePrjPathes" />
+                </AssociationSet>
+                <AssociationSet Name="SubprojectTypeToSubprojectTypeInstrSet" Association="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeToSubprojectTypeInstr" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SubprojectTypes" Role="FromRole_SubprojectTypeToSubprojectTypeInstr" />
+                    <End EntitySet="SubprojectTypeInstructions" Role="ToRole_SubprojectTypeToSubprojectTypeInstr" />
+                </AssociationSet>
+                <AssociationSet Name="ContentTypesToToolTypesSet" Association="/GSSLS/PRJ_HELPER_SRV.ContentTypeToToolTypes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ContentTypes" Role="FromRole_ContentTypeToToolTypes" />
+                    <End EntitySet="ToolTypes" Role="ToRole_ContentTypeToToolTypes" />
+                </AssociationSet>
+                <AssociationSet Name="ProjectTypeToStakeholderRolesSet" Association="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToStakeholderRoles" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProjectTypes" Role="FromRole_ProjectTypeToStakeholderRoles" />
+                    <End EntitySet="StakeholderRoles" Role="ToRole_ProjectTypeToStakeholderRoles" />
+                </AssociationSet>
+                <AssociationSet Name="SystemsToEvalParametersSet" Association="/GSSLS/PRJ_HELPER_SRV.SystemToEvalParameters" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Systems" Role="FromRole_SystemToEvalParameters" />
+                    <End EntitySet="EvalParameters" Role="ToRole_SystemToEvalParameters" />
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupSettingSet" Association="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupSetting" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupSetting" />
+                    <End EntitySet="WorkgroupSettings" Role="ToRole_WorkgroupToWorkgroupSetting" />
+                </AssociationSet>
+                <AssociationSet Name="SubprojectTypesToAssetTypesSet" Association="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeToAssetTypes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SubprojectTypes" Role="FromRole_SubprojectTypeToAssetTypes" />
+                    <End EntitySet="AssetTypes" Role="ToRole_SubprojectTypeToAssetTypes" />
+                </AssociationSet>
+                <AssociationSet Name="ProjectTypeToAssetTypesSet" Association="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToAssetTypes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProjectTypes" Role="FromRole_ProjectTypeToAssetTypes" />
+                    <End EntitySet="AssetTypes" Role="ToRole_ProjectTypeToAssetTypes" />
+                </AssociationSet>
+                <AssociationSet Name="SubprojectTypesToWorkflowsSet" Association="/GSSLS/PRJ_HELPER_SRV.SubprojectTypeToWorkflows" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SubprojectTypes" Role="FromRole_SubprojectTypeToWorkflows" />
+                    <End EntitySet="Workflows" Role="ToRole_SubprojectTypeToWorkflows" />
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupCostElementSet" Association="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupCostElement" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupCostElement" />
+                    <End EntitySet="WorkgroupCostElements" Role="ToRole_WorkgroupToWorkgroupCostElement" />
+                </AssociationSet>
+                <AssociationSet Name="SystemsToDevSystemsSet" Association="/GSSLS/PRJ_HELPER_SRV.SystemToDevSystems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Systems" Role="FromRole_SystemToDevSystems" />
+                    <End EntitySet="DevSystems" Role="ToRole_SystemToDevSystems" />
+                </AssociationSet>
+                <AssociationSet Name="SystemsToGlobalGraphsSet" Association="/GSSLS/PRJ_HELPER_SRV.SystemToGlobalGraphs" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Systems" Role="FromRole_SystemToGlobalGraphs" />
+                    <End EntitySet="GlobalGraphs" Role="ToRole_SystemToGlobalGraphs" />
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupIOGroupSet" Association="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupIOGroup" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupIOGroup" />
+                    <End EntitySet="WorkgroupIOGroups" Role="ToRole_WorkgroupToWorkgroupIOGroup" />
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupToWorkgroupApproverSet" Association="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupApprover" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupApprover" />
+                    <End EntitySet="WorkgroupApprovers" Role="ToRole_WorkgroupToWorkgroupApprover" />
+                </AssociationSet>
+                <AssociationSet Name="ProjectTypesToWorkgroupsSet" Association="/GSSLS/PRJ_HELPER_SRV.ProjectTypeToWorkgroups" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ProjectTypes" Role="FromRole_ProjectTypeToWorkgroups" />
+                    <End EntitySet="Workgroups" Role="ToRole_ProjectTypeToWorkgroups" />
+                </AssociationSet>
+                <AssociationSet Name="WorkgroupsToWorkgroupUsersSet" Association="/GSSLS/PRJ_HELPER_SRV.WorkgroupToWorkgroupUsers" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="Workgroups" Role="FromRole_WorkgroupToWorkgroupUsers" />
+                    <End EntitySet="WorkgroupUsers" Role="ToRole_WorkgroupToWorkgroupUsers" />
+                </AssociationSet>
+                <FunctionImport Name="GetConstructedWorkflow" ReturnType="Collection(/GSSLS/PRJ_HELPER_SRV.Workflow)" EntitySet="Workflows" m:HttpMethod="GET" sap:action-for="/GSSLS/PRJ_HELPER_SRV.Workflow">
+                    <Parameter Name="PrjItemId" Type="Edm.String" Mode="In" MaxLength="18" />
+                    <Parameter Name="WorkflowId" Type="Edm.String" Mode="In" MaxLength="10" />
+                </FunctionImport>
+                <FunctionImport Name="CostElementIsValid" ReturnType="/GSSLS/PRJ_HELPER_SRV.CostElementValid" m:HttpMethod="GET">
+                    <Parameter Name="CostElementType" Type="Edm.String" Mode="In" MaxLength="10" />
+                    <Parameter Name="CostElementValue" Type="Edm.String" Mode="In" MaxLength="24" />
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link rel="self" href="https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+            <atom:link rel="latest-version" href="https://vhslsdwdwd.sls.rot.hec.sap.biz/sap/opu/odata/gssls/PRJ_HELPER_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom" />
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,45 @@
+<core:FragmentDefinition 
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core">
+
+  <Dialog id="createDialog" title="{i18n>CreateNewInstruction}" contentWidth="500px">
+    <buttons>
+      <Button text="{i18n>CreateBtn}" press="onCreatePress" />
+      <Button text="{i18n>CancelBtn}" press="onCancelPress" />
+    </buttons>
+    <content>
+      <FlexBox class="sapUiSmallMargin" direction="Column" alignItems="End" justifyContent="Start">
+        <FlexBox class="sapUiTinyMarginBottom" direction="Row" alignItems="Center" justifyContent="Start">
+          <Label required="true" class="sapUiSmallMarginEnd" text="{i18n>InstructionShorts}" />
+          <Input 
+            value="{worklistView>/newInstruction/InstructionShort}"
+            valueState="{validateModel>/InstructionShortValueState}"
+            valueStateText="{i18n>InstructionShortValueStateErrorText}"
+          />
+        </FlexBox>
+
+        <FlexBox class="sapUiTinyMarginBottom" direction="Row" alignItems="Center" justifyContent="Start">
+            <Label required="true" class="sapUiSmallMarginEnd" text="{i18n>InstructionLong}" />
+            <TextArea 
+                value="{worklistView>/newInstruction/InstructionLong}"
+                valueState="{validateModel>/InstructionLongValueState}"
+                valueStateText="{i18n>InstructionLongValueStateErrorText}"/>
+        </FlexBox>
+
+        <FlexBox class="sapUiTinyMarginBottom" direction="Row" alignItems="Center" justifyContent="Start">
+            <Label required="true" class="sapUiSmallMarginEnd" text="{i18n>AssignedSubprojectType}" />
+            <MultiComboBox 
+              items="{path: 'helperModel>/SubprojectTypes'}"
+              selectedKeys="{worklistView>/newInstruction/ToSubprojectTypeInstructions}"
+              valueState="{validateModel>/ToSubprojectTypeInstructionsValueState}"
+              valueStateText="{i18n>ToSubprojectTypeInstructionsValueStateErrorText}">
+              <core:Item 
+                key="{helperModel>SubprjType}"
+                text="{helperModel>SubprjType}-{helperModel>Description}" />
+            </MultiComboBox>
+        </FlexBox>
+      </FlexBox>
+    </content>
+  </Dialog>
+
+</core:FragmentDefinition>
