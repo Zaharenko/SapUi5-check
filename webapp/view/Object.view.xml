@@ -13,7 +13,8 @@
         <Input value="{InstructionId}" editable="false" class="sapUiTinyMarginBottom"/>
         
         <Label text="{i18n>ShortDescription}" />
-        <Input value="{InstructionShort}" editable="{objectPageModel>/isEditMode}" class="sapUiTinyMarginBottom"/>
+        <Input value="{InstructionShort}" editable="{objectPageModel>/isEditMode}" class="sapUiTinyMarginBottom" id="instructionShortInput" />
+
 
         <Label text="{i18n>LastChangedOn}" />
         <Text text="{path: 'ChDate', formatter: '.formatChDate'}" class="sapUiTinyMarginBottom"/> 
@@ -24,9 +25,9 @@
         <Label text="{i18n>InstructionLong}" />
         <richeditor:RichTextEditor value="{InstructionLong}" editable="{objectPageModel>/isEditMode}" id="instructionLongTextArea" height="300px" class="sapUiTinyMarginBottom"></richeditor:RichTextEditor>
         <Label text="{i18n>Assigned Subproject Types}" />
-        <MultiComboBox editable="{objectPageModel>/isEditMode}" items="{path: 'helperModel>/SubprojectTypes'}" selectedKeys="{worklistView>/newInstruction/ToSubprojectTypeInstructions}" valueState="{validateModel>/ToSubprojectTypeInstructionsValueState}" valueStateText="{i18n>ToSubprojectTypeInstructionsValueStateErrorText}">
-          <core:Item key="{helperModel>SubprjType}" text="{helperModel>SubprjType}" />
-        </MultiComboBox>
+          <MultiComboBox id="instructionSelect" editable="{objectPageModel>/isEditMode}" items="{path: 'helperModel>/SubprojectTypes'}" selectedKeys="{objectPageModel>/ToSubprojectTypeInstructions}" valueState="{validateModel>/ToSubprojectTypeInstructionsValueState}" valueStateText="{i18n>ToSubprojectTypeInstructionsValueStateErrorText}">
+            <core:Item key="{helperModel>SubprjType}" text="{helperModel>SubprjType}" />
+          </MultiComboBox>
       </VBox>
     </content>
     <footer>

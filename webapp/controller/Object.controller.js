@@ -16,13 +16,8 @@ sap.ui.define([
         /* lifecycle methods                                           */
         /* =========================================================== */
 
-        /**
-         * Called when the worklist controller is instantiated.
-         * @public
-         */
         onInit: function () {
             this.oPageModel = this.getOwnerComponent().getModel("objectPageModel");
-            // Model used to manipulate control states.
             var oViewModel = new JSONModel({
                 editable: false // Initial state: not editable
             });
@@ -34,21 +29,10 @@ sap.ui.define([
         /* event handlers                                              */
         /* =========================================================== */
 
-        /**
-         * Event handler for navigating back.
-         * It there is a history entry we go one step back in the browser history.
-         * If not, it will replace the current entry of the browser history with the worklist route.
-         * @public
-         */
         onNavBack: function () {
             history.go(-1);
         },
 
-        /**
-         * Event handler for the Edit button press.
-         * Enables the edit mode for the form fields.
-         * @public
-         */
         onDeletePress: function () {
             var oElementBinding = this.getView().getElementBinding();
             var oObject = oElementBinding && oElementBinding.getBoundContext().getObject();
@@ -76,18 +60,10 @@ sap.ui.define([
             }
         },
 
-        /**
-         * Event handler for the Edit button press.
-         * @public
-         */
         onEditPress: function () {
             this.oPageModel.setProperty("/isEditMode", true);
         },
 
-        /**
-         * Event handler for the Cancel button press.
-         * @public
-         */
         onCancelPress: function () {
             var oElementBinding = this.getView().getElementBinding();
             var oModel = this.getView().getModel();
@@ -107,83 +83,103 @@ sap.ui.define([
             return "";
         },
 
-        /**
-         * Event handler for the Save button press.
-         * @public
-         */
         onSavePress: function () {
             var oElementBinding = this.getView().getElementBinding();
             var oObject = oElementBinding && oElementBinding.getBoundContext().getObject();
+            var oPageModel = this.getModel("objectPageModel");
+
+            if (!this._validateForm()) {
+                return;
+            }
 
             if (oObject) {
                 var oModel = this.getModel();
                 var that = this;
 
-                // Update the ChDate field with the current date
                 oObject.ChDate = new Date();
+
 
                 oModel.update(oElementBinding.getPath(), oObject, {
                     success: function () {
-                        that.oPageModel.setProperty("/isEditMode", false);
-                        MessageToast.show("Changes saved successfully", { closeOnBrowserNavigation: false });
+                        var aSubprojectTypeInstructionsSelectedKeys = oPageModel.getProperty("/ToSubprojectTypeInstructions");
+                        aSubprojectTypeInstructionsSelectedKeys.forEach((sType) => {
+                            oModel.update("/SubprojectTypeInstructions", {
+                                SubprjType: sType,
+                                InstructionId: oObject.InstructionId,
+                            }, {
+                                success: function (oData) {
+                                    console.log(oData);
+                                },
+                                error: function (oError) {
+                                    console.log(oData);
+                                }
+                            });
+                        })
 
-                        // Refresh the binding context to display the updated data
+                        that.oPageModel.setProperty("/isEditMode", false);
+                        sap.m.MessageToast.show("Changes saved successfully", { closeOnBrowserNavigation: false });
+
                         oElementBinding.refresh();
 
                         var oComponent = that.getOwnerComponent();
-                        var oWorklistController = oComponent && oComponent.getAggregation("rootControl").getController();
+                        var oWorklistController = oComponent && oComponent.getRootControl().getController();
                         var oTable = oWorklistController && oWorklistController.getView().byId("table");
 
                         if (oTable) {
-                            // Clear and rebind the table to the updated model data
                             oTable.unbindItems();
                             oTable.bindItems({
                                 path: "/Instructions",
                                 template: oTable.getBindingInfo("items").template
                             });
                         } else {
-                            MessageToast.show("Table not found in Worklist view");
+                            sap.m.MessageToast.show("Table not found in Worklist view");
                         }
-
-                        that.getRouter().navTo("worklist");
                     },
                     error: function () {
-                        MessageToast.show("Failed to save changes");
+                        sap.m.MessageToast.show("Failed to save changes");
                     }
                 });
             }
-        }
-        ,
+        },
 
+        _validateForm: function () {
+            var oValidateModel = this.getOwnerComponent().getModel("validateModel");
+            var oInstructionShort = this.getView().byId("instructionShortInput");
+            var oInstructionLong = this.getView().byId("instructionLongTextArea");
+            var oInstructionSelect = this.getView().byId("instructionSelect");
+            var sInstructionShortValue = oInstructionShort.getValue();
+            var sInstructionLongValue = oInstructionLong.getValue();
+            var oInstructionSelect = oInstructionLong.getValue();
+        
+            var isValid = true;
+            oValidateModel.setProperty("/InstructionShort", sInstructionShortValue ? "" : "Error");
+            oValidateModel.setProperty("/ToSubprojectTypeInstructionsValueState", oInstructionSelect ? "" : "Error");
+            oValidateModel.setProperty("/InstructionLong", sInstructionLongValue ? "" : "Error");
+            oInstructionShort.setValueState(oValidateModel.getProperty("/InstructionShort") === "Error" ? "Error" : "None");
+        
+            if (oValidateModel.getProperty("/InstructionShort") === "Error" || oValidateModel.getProperty("/InstructionLong") === "Error" || oValidateModel.getProperty("/ToSubprojectTypeInstructionsValueState") === "Error") {
+                isValid = false;
+                oInstructionLong.addStyleClass("errorInput");
+            } else {
+                oInstructionLong.removeStyleClass("errorInput");
+            }
+        
+            return isValid;
+        },
+        
+        
 
-        /* =========================================================== */
-        /* internal methods                                            */
-        /* =========================================================== */
-
-        /**
-         * Binds the view to the object path.
-         * @function
-         * @param {sap.ui.base.Event} oEvent pattern match event in route 'object'
-         * @private
-         */
         _onObjectMatched: function (oEvent) {
             this.oPageModel.setProperty("/isEditMode", false);
             var sObjectId = oEvent.getParameter("arguments").objectId;
             this._bindView("/Instructions" + sObjectId);
         },
 
-        /**
-         * Binds the view to the object path.
-         * @function
-         * @param {string} sObjectPath path to the object to be bound
-         * @private
-         */
         _bindView: function (sObjectPath) {
             var oViewModel = this.getModel("objectView");
 
             this.getView().bindElement({
                 path: sObjectPath,
-                expand: "ToSubprojectTypeInstructions",
                 events: {
                     change: this._onBindingChange.bind(this),
                     dataRequested: function () {
@@ -194,6 +190,19 @@ sap.ui.define([
                     }
                 }
             });
+
+            this.getModel().read(sObjectPath + "/ToSubprojectTypeInstructions", {
+                success: function (oData) {
+                    var aSelectedSubprojectTypes = oData.results.map(function (oItem) {
+                        return oItem.SubprjType;
+                    });
+
+                    this.oPageModel.setProperty("/ToSubprojectTypeInstructions", aSelectedSubprojectTypes);
+                }.bind(this),
+                error: function (oError) {
+                    console.log(oError)
+                }
+            })
         },
 
         _onBindingChange: function () {
@@ -201,7 +210,6 @@ sap.ui.define([
                 oViewModel = this.getModel("objectView"),
                 oElementBinding = oView.getElementBinding();
 
-            // No data for the binding
             if (!oElementBinding.getBoundContext()) {
                 this.getRouter().getTargets().display("objectNotFound");
                 return;

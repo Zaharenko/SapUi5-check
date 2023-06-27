@@ -33,7 +33,7 @@ server:
             name: CUSTOMIZING_SRV
             metadataPath: ./webapp/localService/CUSTOMIZING_SRV/metadata.xml
             mockdataPath: ./webapp/localService/CUSTOMIZING_SRV/data
-            generateMockData: true
+            generateMockData: false
           - urlPath: /sap/opu/odata/sap/PRJ_HELPER_SRV
             name: PRJ_HELPER_SRV
             metadataPath: ./webapp/localService/PRJ_HELPER_SRV/metadata.xml

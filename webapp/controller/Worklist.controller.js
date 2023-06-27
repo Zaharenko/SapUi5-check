@@ -173,19 +173,30 @@ sap.ui.define([
 
       // Create a new instruction
       oModel.create("/Instructions", oNewInstruction, {
-        success: function (oData) {
+        success: function (oCreatedInstruction) {
           // Update the table with the newly created instruction
           oTable.getModel().refresh();
 
-          // Clear the new instruction form
-          oView.getModel("worklistView").setProperty("/newInstruction", {
-            InstructionShort: "",
-            InstructionLong: "",
-            ToSubprojectTypeInstructions: []
-          });
-
           // Close the dialog
           oView.byId("createDialog").close();
+
+          oNewInstruction.ToSubprojectTypeInstructions.forEach((sType) => {
+            oModel.create("/SubprojectTypeInstructions", {
+              SubprjType: sType,
+              InstructionId: oCreatedInstruction.InstructionId,
+            }, {
+              success: function (oData) {
+                console.log(oData);
+              },
+              error: function (oError) {
+                console.log(oData);
+              }
+            });
+          })
+
+
+
+
         },
         error: function (oError) {
           MessageToast.show("No new instruction has been created");

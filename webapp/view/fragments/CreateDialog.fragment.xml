@@ -10,7 +10,7 @@
     <content>
       <FlexBox class="sapUiSmallMargin" direction="Column" alignItems="End" justifyContent="Start">
         <FlexBox class="sapUiTinyMarginBottom" direction="Row" alignItems="Center" justifyContent="Start">
-          <Label class="sapUiSmallMarginEnd" text="{i18n>InstructionShorts}" />
+          <Label required="true" class="sapUiSmallMarginEnd" text="{i18n>InstructionShorts}" />
           <Input 
             value="{worklistView>/newInstruction/InstructionShort}"
             valueState="{validateModel>/InstructionShortValueState}"
@@ -19,7 +19,7 @@
         </FlexBox>
 
         <FlexBox class="sapUiTinyMarginBottom" direction="Row" alignItems="Center" justifyContent="Start">
-            <Label class="sapUiSmallMarginEnd" text="{i18n>InstructionLong}" />
+            <Label required="true" class="sapUiSmallMarginEnd" text="{i18n>InstructionLong}" />
             <TextArea 
                 value="{worklistView>/newInstruction/InstructionLong}"
                 valueState="{validateModel>/InstructionLongValueState}"
@@ -27,7 +27,7 @@
         </FlexBox>
 
         <FlexBox class="sapUiTinyMarginBottom" direction="Row" alignItems="Center" justifyContent="Start">
-            <Label class="sapUiSmallMarginEnd" text="{i18n>AssignedSubprojectType}" />
+            <Label required="true" class="sapUiSmallMarginEnd" text="{i18n>AssignedSubprojectType}" />
             <MultiComboBox 
               items="{path: 'helperModel>/SubprojectTypes'}"
               selectedKeys="{worklistView>/newInstruction/ToSubprojectTypeInstructions}"
